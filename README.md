@@ -1,0 +1,3 @@
+- Name: DamonSwitch
+- Version: 1.0 preview (Free)
+- VersionCode: 25
