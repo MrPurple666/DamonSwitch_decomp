@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/toolbarTitle_logo"
+        android:layout_width="58.0dip"
+        android:layout_height="58.0dip"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_marginTop="@dimen/activity_horizontal_spacing_tiny"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:layout_marginBottom="@dimen/activity_horizontal_spacing_tiny"
+        android:src="@mipmap/ic_logo"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:id="@id/toolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_toRightOf="@id/toolbarTitle_logo"
+        android:layout_alignTop="@id/toolbarTitle_logo" />
+    <ImageView
+        android:id="@id/account_pro_iv"
+        android:paddingLeft="4.0dip"
+        android:paddingRight="4.0dip"
+        android:layout_width="40.0dip"
+        android:layout_height="34.0dip"
+        android:src="@mipmap/ic_pro_gray"
+        android:layout_below="@id/toolbarTitle"
+        android:layout_alignLeft="@id/toolbarTitle" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="horizontal"
+        android:id="@id/account_donate_layout"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="34.0dip"
+        android:layout_marginTop="-2.0dip"
+        android:layout_toRightOf="@id/account_pro_iv"
+        android:layout_alignTop="@id/account_pro_iv">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/account_donate_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="2.0dip"
+            android:src="@mipmap/ic_donate_gray" />
+        <ImageView
+            android:id="@id/account_donate_iv2"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="2.0dip"
+            android:src="@mipmap/ic_donate" />
+        <ImageView
+            android:id="@id/account_donate_iv3"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/ic_donate" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView
+        android:textSize="14.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_white_light"
+        android:id="@id/toolbarLock"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_toRightOf="@id/account_pro_iv"
+        android:layout_alignTop="@id/account_pro_iv" />
+</merge>

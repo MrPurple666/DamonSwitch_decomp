@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="260.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@id/dialog_close_btn"
+            android:src="@mipmap/ic_close"
+            android:layout_alignParentRight="true"
+            style="@style/dialog_close_style" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/colorMyGrayerMore"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/platform_all_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/switch_emulator"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_gravity="center"
+        android:id="@id/emulator_tab_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

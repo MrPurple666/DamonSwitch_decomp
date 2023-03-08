@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@id/top_progress_bar"
+        style="@style/FirebaseUI.TopProgressBar" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            style="@style/FirebaseUI.WrapperStyle">
+            <TextView
+                android:id="@id/heading"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fui_email_link_trouble_getting_email_header"
+                style="@style/FirebaseUI.Text.Heading" />
+            <TextView
+                android:id="@id/trouble_signing_in_possible_fixes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                android:text="@string/fui_email_link_trouble_getting_possible_fixes"
+                android:textIsSelectable="false"
+                style="@style/FirebaseUI.Text.BodyText" />
+            <Button
+                android:id="@id/button_resend_email"
+                android:text="@string/fui_email_link_resend"
+                style="@style/FirebaseUI.Button" />
+            <TextView
+                android:id="@id/email_footer_tos_and_pp_text"
+                style="@style/FirebaseUI.PrivacyFooter" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

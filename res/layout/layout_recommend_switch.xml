@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/recommend_buy_switch"
+    android:background="#ff4b96f7"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/menu_item_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/recommend_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/recommend_switch"
+        android:layout_centerVertical="true" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_toRightOf="@id/recommend_img"
+        android:layout_centerVertical="true">
+        <TextView
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recommend_switch_title" />
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:text="@string/recommend_switch_sub" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/white"
+        android:background="@drawable/background_buy_btn_corner"
+        android:paddingLeft="14.0dip"
+        android:paddingTop="4.0dip"
+        android:paddingRight="14.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:text="@string/recommend_switch_download"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:entries="@array/AutoEnableDisable_entries"
+        android:title="@string/pref_system_fastboot"
+        android:key="@string/PrefKey_fastBoot"
+        android:defaultValue="-1"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/AutoEnableDisable_entries_value" />
+    <ListPreference
+        android:entries="@array/EECycleRate_entries"
+        android:title="@string/pref_system_EECycleRate"
+        android:key="@string/PrefKey_EECycleRate"
+        android:defaultValue="-1"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/Auto0123_value" />
+    <ListPreference
+        android:entries="@array/VUCycleSteal_entries"
+        android:title="@string/pref_system_VUCycleSteal"
+        android:key="@string/PrefKey_VUCycleSteal"
+        android:defaultValue="-1"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/Auto0123_value" />
+    <ListPreference
+        android:entries="@array/RoundMode_entries"
+        android:title="@string/pref_system_EERoundMode"
+        android:key="@string/PrefKey_EERoundMode"
+        android:defaultValue="-1"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/Auto0123_value" />
+    <ListPreference
+        android:entries="@array/ClampMode_entries"
+        android:title="@string/pref_system_EEClampMode"
+        android:key="@string/PrefKey_EEClampMode"
+        android:defaultValue="-1"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/Auto0123_value" />
+    <ListPreference
+        android:entries="@array/RoundMode_entries"
+        android:title="@string/pref_system_VURoundMode"
+        android:key="@string/PrefKey_VURoundMode"
+        android:defaultValue="-1"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/Auto0123_value" />
+    <ListPreference
+        android:entries="@array/ClampMode_entries"
+        android:title="@string/pref_system_VUClampMode"
+        android:key="@string/PrefKey_VUClampMode"
+        android:defaultValue="-1"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/Auto0123_value" />
+    <ListPreference
+        android:entries="@array/SaveStateSlots_entries"
+        android:title="@string/pref_system_SaveStateSlots"
+        android:key="SaveStateSlots"
+        android:defaultValue="2"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/SaveStateSlots_value" />
+    <SwitchPreference
+        android:title="@string/pref_system_MemoryCardSave"
+        android:key="MemoryCardSave"
+        android:defaultValue="false" />
+    <SwitchPreference
+        android:title="@string/pref_system_DeleteContent"
+        android:key="DeleteContent"
+        android:summary="@string/pref_system_DeleteContent_summary"
+        android:defaultValue="false" />
+</PreferenceScreen>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:id="@id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        android:text="免密登陆"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/btn_close"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/custom_port_dialog_action_bar" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@id/container_icon"
+        android:layout_width="200.0dip"
+        android:layout_height="51.0dip"
+        android:layout_marginRight="30.0dip"
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@mipmap/umeng_socialize_gmail"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@mipmap/umeng_socialize_qq"
+            android:layout_centerInParent="true" />
+        <ImageView
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@mipmap/umeng_socialize_sina"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

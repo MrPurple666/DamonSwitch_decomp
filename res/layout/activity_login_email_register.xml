@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:id="@id/activity_login_email_register_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            style="@style/FirebaseUI.WrapperStyle">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/email_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                android:transitionName="@string/fui_email_field_name"
+                android:transitionGroup="true"
+                app:errorEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.EmailField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/email"
+                    style="@style/FirebaseUI.TextInputEditText.EmailField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/name_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                app:errorEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.NameField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/FirebaseUI.TextInputEditText.NameField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <FrameLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:orientation="horizontal"
+                    android:id="@id/verification_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="130.0dip"
+                    android:hint="@string/email_verification_code"
+                    app:counterMaxLength="6"
+                    app:errorEnabled="true"
+                    app:hintAnimationEnabled="true">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@id/verification_code_et"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:maxLength="6"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        style="@style/FirebaseUI.TextInputEditText.NameField" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:layout_gravity="right"
+                    android:id="@id/button_send_verify_code"
+                    android:layout_width="120.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send_verification_code"
+                    android:onClick="onClick"
+                    style="@style/FirebaseUI.Button" />
+            </FrameLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/password_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.PasswordField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/password"
+                    style="@style/FirebaseUI.TextInputEditText.PasswordField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/password_repeat_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.PasswordField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/password_repeat"
+                    style="@style/FirebaseUI.TextInputEditText.PasswordField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:enabled="false"
+                android:id="@id/button_create"
+                android:layout_width="120.0dip"
+                android:text="@string/submit"
+                android:onClick="onClick"
+                style="@style/FirebaseUI.Button" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@id/ProgressBar"
+        android:visibility="gone"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        android:layout_marginTop="32.0dip"
+        android:layout_centerInParent="true"
+        android:elevation="2.0dip"
+        style="?android:progressBarStyle" />
+</RelativeLayout>

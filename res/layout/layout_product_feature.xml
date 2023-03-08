@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/product_fps_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height">
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_fps_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/icon_fps" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/product_fps_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/product_game_fps"
+            android:layout_toRightOf="@id/product_fps_ic" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_fps_value"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/product_offline_play_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height">
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title_big"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_offline_play_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/icon_offline" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/product_offline_play_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/product_offline_play"
+            android:layout_toRightOf="@id/product_offline_play_ic" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/product_offline_play_value"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="@string/icon_none"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/product_ad_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height">
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_ad_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/icon_ad" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_ad_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/product_ad_free"
+            android:layout_toRightOf="@id/product_ad_ic" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/product_ad_value_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="@string/icon_none"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/product_gamepad_virtual_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height">
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title_huge"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_gamepad_virtual_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_vertical_spacing"
+            android:text="@string/icon_hand_click" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/product_gamepad_virtual_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/pref_user_define_button"
+            android:layout_toRightOf="@id/product_gamepad_virtual_ic" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/product_gamepad_virtual_value_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="@string/icon_none"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/product_gamepad_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height">
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_gamepad_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_vertical_spacing"
+            android:text="@string/icon_gamepad" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/product_gamepad_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/product_game_pad"
+            android:layout_toRightOf="@id/product_gamepad_ic" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/product_gamepad_value_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="@string/icon_none"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_gamepad_value_tv"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="@string/coming_soon"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/product_params_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height">
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_params_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/icon_strengthen" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/product_params_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/product_strengthen"
+            android:layout_toRightOf="@id/product_params_ic" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/product_params_value_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="@string/icon_none"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height">
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_resolution_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/icon_hd" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_resolution_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/product_hd"
+            android:layout_toRightOf="@id/product_resolution_ic" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/product_resolution_value"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="@string/icon_none"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/product_archive_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height">
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_archive_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/icon_strengthen" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/product_archive_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/product_archive"
+            android:layout_toRightOf="@id/product_archive_ic" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/product_archive_value"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="2"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center"
+        android:id="@id/product_description"
+        android:tag="TextView 说明 "
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height"
+        android:text="@string/product_free_description" />
+</LinearLayout>

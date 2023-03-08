@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:title="@string/pref_graphics_showfps"
+        android:key="showFps"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="@string/pref_graphics_showDevice"
+        android:key="showDevice"
+        android:defaultValue="true" />
+    <ListPreference
+        android:entries="@array/aspectratio_entries"
+        android:title="@string/pref_graphics_aspectratio"
+        android:key="@string/PrefKey_AspectRatio"
+        android:defaultValue="0"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/aspectratio_entries_value" />
+    <ListPreference
+        android:entries="@array/upscale_entries"
+        android:title="@string/pref_graphics_renderresolution"
+        android:key="@string/PrefKey_GSUpScale"
+        android:defaultValue="2"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/upscale_entries_value" />
+    <PreferenceCategory
+        android:title="@string/pref_graphics_experimental"
+        android:key="GSAdvancedSettings">
+        <ListPreference
+            android:entries="@array/GSDrawBatch_entries"
+            android:title="@string/pref_graphics_GSDrawBatch"
+            android:key="@string/PrefKey_GSDrawBatch"
+            android:defaultValue="-1"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/GSDrawBatch_entries_value" />
+        <ListPreference
+            android:entries="@array/GSSkipDraw_entries_value"
+            android:title="@string/pref_graphics_GSSkipDraw"
+            android:key="@string/PrefKey_GSSkipDraw"
+            android:defaultValue="-1"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/GSSkipDraw_entries_value" />
+        <ListPreference
+            android:entries="@array/AutoEnableDisable_entries"
+            android:title="@string/pref_graphics_GSSkipDrawDisable"
+            android:key="@string/PrefKey_GSSkipDrawDisable"
+            android:defaultValue="-1"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/AutoEnableDisable_entries_value" />
+        <ListPreference
+            android:entries="@array/AutoEnableDisable_entries"
+            android:title="@string/pref_graphics_GSSkipLTL"
+            android:key="@string/PrefKey_GSSkipLTL"
+            android:defaultValue="-1"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/AutoEnableDisable_entries_value" />
+        <ListPreference
+            android:entries="@array/AutoEnableDisable_entries"
+            android:title="@string/pref_graphics_GSSkipDAT"
+            android:key="@string/PrefKey_GSSkipDAT"
+            android:defaultValue="-1"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/AutoEnableDisable_entries_value" />
+        <ListPreference
+            android:entries="@array/AutoEnableDisable_entries"
+            android:title="@string/pref_graphics_GSPassBatch"
+            android:key="@string/PrefKey_GSPassBatch"
+            android:defaultValue="-1"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/AutoEnableDisable_entries_value" />
+        <ListPreference
+            android:entries="@array/AutoOrForceEnable_entries"
+            android:title="@string/pref_graphics_tryFixGhost"
+            android:key="@string/PrefKey_TryFixGhost"
+            android:defaultValue="0"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/TryFixGhost_entries_value" />
+        <ListPreference
+            android:entries="@array/AutoOrForceEnable_entries"
+            android:title="@string/pref_graphics_tryFixVerticalLine"
+            android:key="@string/PrefKey_TryFixVerticalLine"
+            android:defaultValue="0"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/AutoOrForceEnable_entries_value" />
+    </PreferenceCategory>
+</PreferenceScreen>

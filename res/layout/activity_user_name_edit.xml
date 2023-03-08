@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@id/mine_user_info_layout"
+            android:background="@color/color_gray_deep"
+            android:fitsSystemWindows="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@id/qr_code_header_bar"
+                layout="@layout/layout_titlebar_normal" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/text_color_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing_large"
+            android:layout_marginTop="@dimen/activity_horizontal_spacing_large"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="@string/nick_name_edit_mime" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing_large"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large">
+            <com.damonplay.damonps2.uiUtils.IconFontTextView
+                android:textSize="@dimen/text_size_icon_tiny"
+                android:textColor="@color/text_color_gray"
+                android:id="@id/user_name_edit_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_size_tiny"
+                android:text="@string/icon_close"
+                android:layout_alignParentRight="true" />
+            <EditText
+                android:textSize="@dimen/text_size_title"
+                android:textColor="@color/text_color_white_light"
+                android:id="@id/user_name_edit_name"
+                android:background="@color/transparent"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:maxLength="18"
+                android:layout_toLeftOf="@id/user_name_edit_clear" />
+        </RelativeLayout>
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/text_color_gray"
+            android:id="@id/user_name_edit_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing_large"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+            android:text="3/16" />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@id/ProgressBar"
+        android:visibility="gone"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        android:layout_marginTop="32.0dip"
+        android:layout_centerInParent="true"
+        android:elevation="2.0dip"
+        style="?android:progressBarStyle" />
+</RelativeLayout>

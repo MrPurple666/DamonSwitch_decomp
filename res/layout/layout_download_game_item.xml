@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/color_gray_deep"
+    android:layout_width="fill_parent"
+    android:layout_height="136.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/game_item_poster"
+        android:layout_width="90.0dip"
+        android:layout_height="120.0dip"
+        android:layout_margin="@dimen/activity_horizontal_spacing_small"
+        android:src="@mipmap/ic_gamefile" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/game_item_poster_progress_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white_light"
+            android:id="@id/game_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="46.0dip"
+            android:layout_marginTop="@dimen/activity_vertical_spacing"
+            android:maxLines="2"
+            android:layout_alignParentLeft="true" />
+        <com.damonplay.alib.uiUtil.progressbar.NumberProgressBar
+            android:id="@id/number_progress_bar"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="fill_parent"
+            android:layout_height="22.0dip"
+            android:layout_marginTop="@dimen/activity_vertical_spacing"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing"
+            android:layout_alignParentBottom="true"
+            app:progress_reached_color="@color/ic_color_active"
+            app:progress_unreached_color="#ffcccccc" />
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/text_color_white_light"
+            android:id="@id/game_item_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:text="1.2MB/s \u0009 180MB/720MB"
+            android:layout_above="@id/number_progress_bar"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/text_color_white_light"
+            android:id="@id/game_item_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing"
+            android:layout_alignTop="@id/game_item_state"
+            android:layout_alignParentRight="true" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_icon"
+            android:textColor="@color/ic_color_active"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/game_item_del_btn"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing"
+            android:text="@string/icon_recycle_bin"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="@dimen/text_size_icon"
+            android:textColor="@color/ic_color_active"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/game_item_pause_btn"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing"
+            android:text="@string/icon_recycle_bin"
+            android:layout_toLeftOf="@id/game_item_del_btn"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

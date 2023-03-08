@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/qr_code_header_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_titlebar_simple" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:id="@id/qr_code_background_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:textSize="@dimen/text_size_title"
+                android:textColor="@color/text_color_white_light"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_spacing_large"
+                android:layout_marginTop="72.0dip"
+                android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+                android:text="@string/input_damon_key_add_game" />
+            <EditText
+                android:textSize="@dimen/text_size_normal"
+                android:textColorHint="@color/text_color_gray"
+                android:id="@id/qr_code_et"
+                android:background="@color/white"
+                android:padding="@dimen/activity_horizontal_spacing_tiny"
+                android:layout_width="fill_parent"
+                android:layout_height="68.0dip"
+                android:layout_marginLeft="@dimen/activity_horizontal_spacing_large"
+                android:layout_marginTop="@dimen/activity_horizontal_spacing_large"
+                android:layout_marginRight="@dimen/activity_horizontal_spacing_large"
+                android:hint="@string/sync_paste_code" />
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_spacing_large"
+                android:layout_marginTop="38.0dip"
+                android:layout_marginRight="@dimen/activity_horizontal_spacing_large">
+                <View
+                    android:id="@id/anchor"
+                    android:layout_width="1.0px"
+                    android:layout_height="1.0px"
+                    android:layout_centerInParent="true" />
+                <TextView
+                    android:textSize="@dimen/text_size_big"
+                    android:textColor="@color/text_color_white_light"
+                    android:gravity="center"
+                    android:id="@id/qr_code_switch"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/activity_vertical_spacing"
+                    android:layout_width="92.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_spacing"
+                    android:text="@string/switch_qr_scan"
+                    android:layout_toLeftOf="@id/anchor" />
+                <TextView
+                    android:textSize="@dimen/text_size_big"
+                    android:textColor="@color/text_color_white_light"
+                    android:gravity="center"
+                    android:id="@id/qr_code_et_btn"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/activity_vertical_spacing"
+                    android:layout_width="92.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+                    android:text="@android:string/ok"
+                    android:layout_toRightOf="@id/anchor" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

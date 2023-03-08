@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:icon="@drawable/ic_graphics"
+        android:title="@string/pref_header_graphics"
+        android:fragment="com.damonplay.damonps2.activity.SettingsActivity$GraphicsPreferenceFragment" />
+    <header
+        android:icon="@drawable/ic_sound"
+        android:title="@string/pref_header_audio"
+        android:fragment="com.damonplay.damonps2.activity.SettingsActivity$AudioPreferenceFragment" />
+    <header
+        android:icon="@drawable/ic_controls"
+        android:title="@string/pref_header_controls"
+        android:fragment="com.damonplay.damonps2.activity.SettingsActivity$ControlsPreferenceFragment" />
+    <header
+        android:icon="@drawable/ic_system"
+        android:title="@string/pref_header_system"
+        android:fragment="com.damonplay.damonps2.activity.SettingsActivity$SystemPreferenceFragment" />
+    <header
+        android:icon="@drawable/ic_system"
+        android:title="@string/pref_header_developer"
+        android:fragment="com.damonplay.damonps2.activity.SettingsActivity$DeveloperPreferenceFragment" />
+</preference-headers>

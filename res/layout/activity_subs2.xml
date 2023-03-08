@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?android:colorBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/img_avatar"
+        android:layout_width="130.0dip"
+        android:layout_height="130.0dip"
+        android:layout_marginTop="16.0dip"
+        android:src="@mipmap/ic_user_portrait"
+        android:layout_centerInParent="true"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="0.0dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/damonps2_user" />
+    <TextView
+        android:textSize="16.0sp"
+        android:gravity="center"
+        android:id="@id/txt_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_spacing"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_avatar" />
+    <ProgressBar
+        android:id="@id/PayProgressBar"
+        android:visibility="gone"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        android:layout_marginTop="32.0dip"
+        android:elevation="2.0dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_name"
+        style="?android:progressBarStyle" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textStyle="bold"
+        android:id="@id/PayProgressBarText"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:elevation="2.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/PayProgressBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/PayProgressBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

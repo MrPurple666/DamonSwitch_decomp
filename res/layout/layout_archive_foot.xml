@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/info_item_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/info_item_height">
+        <TextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_product_free"
+            android:gravity="center"
+            android:id="@id/archive_foot_tv1"
+            android:background="@drawable/background_corner_trans_free"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/activity_horizontal_spacing_tiny"
+            android:text="@string/more_archive"
+            android:layout_weight="1.0"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_product_pro"
+            android:gravity="center"
+            android:id="@id/archive_foot_tv2"
+            android:background="@drawable/background_corner_trans_payed"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/activity_horizontal_spacing_tiny"
+            android:text="@string/more_archive_100"
+            android:layout_weight="1.0"
+            android:layout_centerInParent="true" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

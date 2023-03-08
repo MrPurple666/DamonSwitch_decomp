@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/background_dialog_corner_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="80.0dip">
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@id/btn_close"
+            android:src="@mipmap/ic_close"
+            style="@style/dialog_close_style" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_spacing_large">
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@id/dialog_rating_star"
+                android:layout_width="280.0dip"
+                android:layout_height="@dimen/info_item_height"
+                app:srb_borderColor="@color/colorMyGreen"
+                app:srb_fillColor="@color/colorMyGreen"
+                app:srb_numberOfStars="5"
+                app:srb_pressedBorderColor="@color/colorMyGreen"
+                app:srb_pressedFillColor="@color/colorMyGreen"
+                app:srb_rating="0.0"
+                app:srb_starSize="40.0dip"
+                app:srb_stepSize="1.0" />
+            <TextView
+                android:textSize="@dimen/text_size_title_big"
+                android:textColor="@color/text_color_white"
+                android:gravity="center"
+                android:id="@id/dialog_rating_star_tv"
+                android:layout_width="40.0dip"
+                android:layout_height="@dimen/info_item_height"
+                android:text="0.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/text_color_gray"
+            android:id="@id/dialog_score_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_spacing"
+            android:layout_marginTop="@dimen/activity_vertical_spacing"
+            android:text="@string/score_show_avg_tip" />
+        <TextView
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/text_color_white"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/dialog_submit"
+            android:paddingLeft="@dimen/activity_vertical_spacing_large"
+            android:paddingTop="@dimen/activity_horizontal_spacing"
+            android:paddingRight="@dimen/activity_vertical_spacing_large"
+            android:paddingBottom="@dimen/activity_horizontal_spacing"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_46"
+            android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+            android:layout_marginBottom="@dimen/activity_vertical_spacing_large"
+            android:text="@string/submit" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

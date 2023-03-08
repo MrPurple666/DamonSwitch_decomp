@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        app:elevation="4.0dip">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            android:background="?colorPrimary"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:id="@id/mainContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

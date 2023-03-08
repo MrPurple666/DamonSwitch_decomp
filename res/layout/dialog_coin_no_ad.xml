@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:padding="12.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@id/coin_dialog_contentlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40.0dip"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:textSize="16.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_white"
+            android:id="@id/coin_dialog_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_ad" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@id/coin_dialog_buttonlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:layout_below="@id/coin_dialog_contentlayout">
+        <Button
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/coin_dialog_buyCoin"
+            android:background="@drawable/my_button_green"
+            android:paddingLeft="4.0dip"
+            android:layout_width="228.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:text="@string/coin"
+            android:drawableLeft="@drawable/btn_coin"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@id/coin_dialog_close"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+</RelativeLayout>

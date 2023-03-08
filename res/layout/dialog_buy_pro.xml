@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/buy_pro_head_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="132.0dip"
+        android:src="@mipmap/ic_buy_pro_head"
+        android:layout_centerHorizontal="true" />
+    <include
+        android:id="@id/buy_pro_center_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buy_pro_head_iv"
+        layout="@layout/layout_buy_pro" />
+    <ImageView
+        android:id="@id/buy_pro_close_iv"
+        android:src="@mipmap/ic_close"
+        android:layout_below="@id/buy_pro_center_layout"
+        android:layout_centerHorizontal="true"
+        style="@style/dialog_close_style" />
+</RelativeLayout>

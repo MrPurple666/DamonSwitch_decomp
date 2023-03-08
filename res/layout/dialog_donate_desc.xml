@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:paddingTop="1.0dip"
+    android:paddingBottom="@dimen/dp_10"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="20.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:id="@id/dialog_donate_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1.0dip">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/dialog_play_drive_scrollcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="18.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@id/dialog_play_drive_line1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="12.0dip"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/donatedialog_title" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="center|left"
+                android:id="@id/dialog_play_drive_line2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/donatedialog_content_one" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="center|left"
+                android:id="@id/dialog_play_drive_line3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/donatedialog_content_two" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_product_payed"
+                android:gravity="center|left"
+                android:autoLink="email"
+                android:id="@id/dialog_play_drive_line7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/donatedialog_content_three" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="center|left"
+                android:id="@id/dialog_play_drive_line8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/donatedialog_content_four" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/dialog_donate_check_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/standard_touchDP"
+                android:layout_marginLeft="16.0dip">
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:theme="@style/MyAppCompatCheckBox"
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/dialog_donate_checkbox"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/text_color_white_light"
+                    android:gravity="center|left"
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/dialog_donate_checkbox_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginRight="8.0dip"
+                    android:text="@string/dialog_game_remind"
+                    android:layout_centerVertical="true" />
+            </LinearLayout>
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-30.0dip"
+                layout="@layout/layout_damon_emu_studio" />
+            <Button
+                android:textSize="14.0sp"
+                android:textColor="@color/text_color_gray"
+                android:gravity="center"
+                android:id="@id/donate_btn"
+                android:background="@drawable/ripple2"
+                android:clickable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:layout_margin="10.0dip"
+                android:text="@string/string_ok"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+    <ImageView
+        android:layout_gravity="right"
+        android:id="@id/btn_close_donate_dialog"
+        android:visibility="invisible"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentRight="true"
+        android:contentDescription="close dialog"
+        style="@style/dialog_close_style" />
+</RelativeLayout>

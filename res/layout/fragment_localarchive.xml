@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:background="@color/transparent_half"
+        android:layout_width="fill_parent"
+        android:layout_height="32.0dip">
+        <TextView
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@id/mylocalarchivecount"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="10.0dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/appbarCoinLayout"
+            android:background="@drawable/ripple3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@id/appbarCoinImage"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:src="@drawable/ic_coin"
+                android:scaleType="fitXY" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="right"
+                android:id="@id/appbarCoinText"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="2.0dip"
+                android:minWidth="36.0sp"
+                android:text="0" />
+            <ImageView
+                android:id="@id/appbarCoinAddImage"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:layout_marginLeft="2.0dip"
+                android:src="@mipmap/ic_add"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/localarchive_rv"
+        android:background="@color/transparent_half"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</androidx.appcompat.widget.LinearLayoutCompat>

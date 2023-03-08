@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorPrimary"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:id="@id/traffic_pay_item_button_layout"
+        android:background="@color/colorPrimary"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:layout_margin="1.0dip"
+        android:layout_centerInParent="true">
+        <TextView
+            android:textSize="24.0sp"
+            android:typeface="sans"
+            android:textColor="@color/ic_color_active"
+            android:gravity="center|left"
+            android:id="@id/traffic_pay_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing"
+            android:layout_centerInParent="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="16.0sp"
+            android:autoSizeMaxTextSize="24.0sp" />
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/qr_code_white"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/traffic_pay_item_recommand_icon"
+            android:background="@drawable/background_hot_btn_corner"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recommend"
+            android:drawableLeft="@mipmap/icon_hot_fire"
+            android:layout_toRightOf="@id/traffic_pay_item_price"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

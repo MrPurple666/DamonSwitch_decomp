@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:orientation="vertical"
+        android:id="@id/fragment_top_layout"
+        android:background="@color/color_gray_deep"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@id/layout_titlebar"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_scrollFlags="enterAlways|scroll"
+            layout="@layout/layout_titlebar_normal" />
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center_vertical"
+            android:id="@id/downloaded_info"
+            android:background="#ff414141"
+            android:paddingLeft="@dimen/activity_horizontal_spacing_tiny"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/product_item_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/download_recyclerview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <FrameLayout
+            android:id="@id/progressbar_layout_1"
+            android:background="@color/transparent_half"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ProgressBar
+                android:layout_gravity="center"
+                android:id="@id/ProgressBar"
+                android:layout_width="96.0dip"
+                android:layout_height="96.0dip"
+                android:layout_marginTop="32.0dip"
+                android:elevation="2.0dip"
+                app:layout_constraintTop_toBottomOf="@id/btn_pro"
+                style="?android:progressBarStyle" />
+        </FrameLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

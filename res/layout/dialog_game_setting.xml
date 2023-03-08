@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:background="@drawable/background_dialog_corner_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing_big"
+        android:layout_marginTop="60.0dip"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing_big"
+        android:layout_marginBottom="60.0dip"
+        android:minWidth="260.0dip"
+        android:minHeight="360.0dip"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@id/dialog_close_btn"
+            android:padding="8.0dip"
+            android:src="@mipmap/ic_close"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            style="@style/dialog_close_style" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:id="@id/dialog_setting_title_layout"
+            android:paddingTop="6.0dip"
+            android:paddingBottom="6.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.damonplay.damonps2.uiUtils.IconFontTextView
+                android:textSize="20.0sp"
+                android:textColor="@color/qr_code_white"
+                android:layout_gravity="center_vertical"
+                android:id="@id/dialog_setting_back_btn"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_left"
+                android:layout_centerVertical="true" />
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="@color/qr_code_white"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:id="@id/dialog_setting_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_game_setting_title"
+                android:layout_toRightOf="@id/dialog_setting_back_btn" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/qr_code_white"
+                android:id="@id/dialog_setting_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_game_setting_for"
+                android:layout_toRightOf="@id/dialog_setting_back_btn"
+                android:layout_below="@id/dialog_setting_title" />
+        </RelativeLayout>
+        <View
+            android:id="@id/line1"
+            android:background="@color/colorMyGrayer"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_below="@id/dialog_setting_title_layout" />
+        <ExpandableListView
+            android:id="@id/dialog_setting_expandlistview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:groupIndicator="@null"
+            android:layout_above="@id/dialog_setting_btn_layout"
+            android:layout_below="@id/line1" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/dialog_setting_btn_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <View
+                android:background="@color/colorMyGrayer"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:id="@id/dialog_setting_compatible_btn"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:text="@string/dialog_game_setting_compatible"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@color/colorMyGrayer"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="center"
+                android:id="@id/dialog_setting_fastest_btn"
+                android:background="@color/text_color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:text="@string/dialog_game_setting_fastest"
+                android:layout_weight="1.0" />
+            <View
+                android:background="@color/colorMyGrayer"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_above="@id/dialog_qrcode_recongise_btn_layout" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip">
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/text_color_white_light"
+                    android:gravity="center"
+                    android:id="@id/dialog_setting_default_btn"
+                    android:background="@color/text_color_gray_deep"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:text="@string/RestoreSettingsToDefault"
+                    android:layout_weight="1.0" />
+                <View
+                    android:id="@id/line"
+                    android:background="@color/colorMyGrayer"
+                    android:layout_width="1.0px"
+                    android:layout_height="32.0dip"
+                    android:layout_marginTop="4.0dip"
+                    android:layout_marginBottom="4.0dip" />
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/text_color_white_light"
+                    android:gravity="center"
+                    android:id="@id/dialog_setting_start_btn"
+                    android:background="@color/text_color_gray_deep"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:text="@string/BootingGame"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <include
+            android:id="@id/gamesetting_notice_layout"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/layout_game_setting_notice" />
+        <ProgressBar
+            android:id="@id/dialog_setting_progressBar"
+            android:visibility="gone"
+            android:layout_width="90.0dip"
+            android:layout_height="90.0dip"
+            android:layout_marginTop="68.0dip"
+            android:layout_centerHorizontal="true"
+            style="?android:progressBarStyle" />
+    </RelativeLayout>
+</RelativeLayout>

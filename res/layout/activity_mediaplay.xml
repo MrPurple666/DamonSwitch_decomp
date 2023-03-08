@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/activity_mediaplay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@id/layout_media_play_video"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true">
+        <com.damonplay.damonps2.uiUtils.universalvideoview.UniversalVideoView
+            android:layout_gravity="center"
+            android:id="@id/media_play_videoView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <com.damonplay.damonps2.uiUtils.universalvideoview.UniversalMediaController
+            android:id="@id/media_play_media_controller"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+    <ImageView
+        android:id="@id/media_play_image"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <RelativeLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:id="@id/title_part"
+        android:background="@color/uvv_titlebar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentTop="true">
+        <ImageButton
+            android:gravity="center"
+            android:id="@id/media_play_title_back"
+            android:background="#00000000"
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/icon_left"
+            android:layout_alignParentLeft="true"
+            android:onClick="buttonClick"
+            android:contentDescription="Back" />
+        <TextView
+            android:textSize="18.0dip"
+            android:textColor="#ffffffff"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_gravity="center|left"
+            android:id="@id/media_play_title"
+            android:paddingRight="8.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/media_play_title_back" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:textSize="16.0dip"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@id/btn_media_play_upload"
+                android:padding="4.0dip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/appbar_padding_top"
+                android:drawableLeft="@drawable/icon_upload"
+                android:onClick="buttonClick" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@id/btn_media_play_share"
+                android:padding="4.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/appbar_padding_top"
+                android:drawableLeft="@drawable/icon_share"
+                android:onClick="buttonClick" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@id/btn_media_play_open"
+                android:padding="4.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/appbar_padding_top"
+                android:drawableLeft="@drawable/icon_send"
+                android:onClick="buttonClick" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@id/btn_media_delete"
+                android:padding="4.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/appbar_padding_top"
+                android:drawableLeft="@drawable/icon_delete"
+                android:onClick="buttonClick" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@id/btn_media_save"
+                android:padding="4.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/appbar_padding_top"
+                android:drawableLeft="@drawable/icon_exit"
+                android:onClick="buttonClick" />
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@id/media_play_info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="32.0dip"
+        android:layout_margin="@dimen/activity_horizontal_spacing"
+        android:layout_below="@id/title_part">
+        <ProgressBar
+            android:id="@id/media_play_info_progress"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            style="?android:progressBarStyle" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center_vertical"
+            android:id="@id/media_play_info_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

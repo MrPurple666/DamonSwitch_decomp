@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/nsemu_root_layout"
+    android:background="@color/black"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/nsemu_gamepad_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/nsemu_surface"
+        android:background="@color/translucent_background"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <RelativeLayout
+        android:id="@id/nsemu_gamepad"
+        android:layout_width="fill_parent"
+        android:layout_height="360.0dip"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@id/nsemu_button_dpad_left"
+            android:background="@drawable/button_dpad_left"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="58.0dip"
+            android:layout_height="58.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_up"
+            android:background="@drawable/button_dpad_up"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="58.0dip"
+            android:layout_height="58.0dip"
+            android:layout_marginLeft="-18.0dip"
+            android:layout_marginBottom="-18.0dip"
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@id/nsemu_button_dpad_left"
+            android:layout_above="@id/nsemu_button_dpad_left" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_right"
+            android:background="@drawable/button_dpad_right"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="58.0dip"
+            android:layout_height="58.0dip"
+            android:layout_marginLeft="-18.0dip"
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@id/nsemu_button_dpad_up"
+            android:layout_alignTop="@id/nsemu_button_dpad_left" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_down"
+            android:background="@drawable/button_dpad_down"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="58.0dip"
+            android:layout_height="58.0dip"
+            android:layout_marginTop="-18.0dip"
+            android:scaleType="fitXY"
+            android:layout_below="@id/nsemu_button_dpad_left"
+            android:layout_alignLeft="@id/nsemu_button_dpad_up" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_A"
+            android:background="@drawable/button_circle"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginRight="10.0dip"
+            android:scaleType="fitXY"
+            android:layout_alignTop="@id/nsemu_button_dpad_left"
+            android:layout_alignParentRight="true" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_X"
+            android:background="@drawable/button_triangle"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginRight="-10.0dip"
+            android:layout_marginBottom="-10.0dip"
+            android:scaleType="fitXY"
+            android:layout_toLeftOf="@id/nsemu_button_dpad_A"
+            android:layout_above="@id/nsemu_button_dpad_A" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_Y"
+            android:background="@drawable/button_square"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginRight="-10.0dip"
+            android:scaleType="fitXY"
+            android:layout_toLeftOf="@id/nsemu_button_dpad_X"
+            android:layout_alignTop="@id/nsemu_button_dpad_A" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_B"
+            android:background="@drawable/button_cross"
+            android:focusable="true"
+            android:clickable="false"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginTop="-10.0dip"
+            android:scaleType="fitXY"
+            android:layout_below="@id/nsemu_button_dpad_A"
+            android:layout_alignLeft="@id/nsemu_button_dpad_X" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_Plus"
+            android:background="@drawable/button_start"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="32.0dip"
+            android:layout_height="26.0dip"
+            android:scaleType="fitXY"
+            android:layout_toLeftOf="@id/nsemu_button_dpad_Y"
+            android:layout_below="@id/nsemu_button_dpad_B" />
+        <ImageView
+            android:id="@id/nsemu_button_dpad_Minus"
+            android:background="@drawable/button_select"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="32.0dip"
+            android:layout_height="26.0dip"
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@id/nsemu_button_dpad_right"
+            android:layout_alignBottom="@id/nsemu_button_dpad_Plus" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/nsemu_game_setting_dialog"
+        android:background="@color/black"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/nsemu_game_setting_title_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="36.0dip">
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/black"
+                android:layout_width="80.0dip"
+                android:layout_height="fill_parent"
+                android:text="General" />
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/black"
+                android:layout_width="80.0dip"
+                android:layout_height="fill_parent"
+                android:text="System" />
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/black"
+                android:layout_width="80.0dip"
+                android:layout_height="fill_parent"
+                android:text="CPU" />
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/black"
+                android:layout_width="80.0dip"
+                android:layout_height="fill_parent"
+                android:text="Graphics" />
+        </LinearLayout>
+        <RelativeLayout
+            android:background="@color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

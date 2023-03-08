@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_horizontal_spacing_big"
+    android:minWidth="200.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="right"
+        android:id="@id/btn_close"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentEnd="true"
+        style="@style/dialog_close_style" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@id/clouddesctitleTv"
+        android:clickable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="22.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:text="@string/clouddesctitle" />
+    <ScrollView
+        android:id="@id/dialog_play_drive_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_below="@id/clouddesctitleTv">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/dialog_play_drive_scrollcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="center|left"
+                android:id="@id/archiveDescContentTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:text="@string/cloudarchivedesc" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_product_payed"
+                android:gravity="center|left"
+                android:autoLink="email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/cloudarchivedescred" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/dialog_play_drive_check_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="16.0dip">
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:theme="@style/MyAppCompatCheckBox"
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/dialog_play_drive_checkbox"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/text_color_white_light"
+                    android:gravity="center|left"
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/dialog_play_drive_checkbox_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginRight="8.0dip"
+                    android:text="@string/dialog_game_remind"
+                    android:layout_centerVertical="true" />
+            </LinearLayout>
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-30.0dip"
+                layout="@layout/layout_damon_emu_studio" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:textSize="16.0sp"
+                android:textColor="@color/color_product_pro"
+                android:gravity="center"
+                android:id="@id/govipTv"
+                android:background="@color/text_color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/button_height_46"
+                android:layout_marginTop="30.0dip"
+                android:text="@string/govip"
+                android:lines="1"
+                android:layout_marginStart="40.0dip"
+                android:layout_marginEnd="@dimen/dp_40" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:textSize="16.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_bg_line"
+                android:gravity="center"
+                android:id="@id/agree_btn"
+                android:background="@color/text_color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/button_height_46"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="@string/iknow"
+                android:lines="1"
+                android:layout_marginStart="40.0dip"
+                android:layout_marginEnd="@dimen/dp_40" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

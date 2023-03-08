@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/damon_main_hotvideo"
+        android:enabled="true"
+        android:id="@id/bottom_nav_compatible"
+        android:title="@string/tabname_compatible"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/damon_main_local"
+        android:enabled="true"
+        android:id="@id/bottom_nav_recent"
+        android:title="@string/tabname_recent"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/damon_main_game"
+        android:enabled="true"
+        android:id="@id/bottom_nav_game"
+        android:title="@string/tab_name_browse"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/damon_main_playdrive"
+        android:enabled="true"
+        android:id="@id/bottom_nav_playdrive"
+        android:title="@string/tabname_PlayDrive"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/damon_main_mine"
+        android:enabled="true"
+        android:id="@id/bottom_nav_mine"
+        android:title="@string/tabname_mine"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/ripple"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/gamebrowser_viewlist_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_folder" />
+        <TextView
+            android:textAppearance="?textAppearanceListItem"
+            android:textColor="@color/colorMyGray"
+            android:id="@id/gamebrowser_viewlist_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+    <View
+        style="@style/Divider" />
+</LinearLayout>

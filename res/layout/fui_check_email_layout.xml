@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@id/top_progress_bar"
+        style="@style/FirebaseUI.TopProgressBar" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/email_top_layout"
+            android:layout_height="wrap_content"
+            style="@style/FirebaseUI.WrapperStyle">
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="top"
+                android:id="@id/header_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fui_email_link_confirm_email_message"
+                style="@style/FirebaseUI.Text.Heading" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/email_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                android:labelFor="@id/email"
+                android:transitionName="@string/fui_email_field_name"
+                android:transitionGroup="true"
+                app:errorEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.EmailField">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/email"
+                    style="@style/FirebaseUI.TextInputEditText.EmailField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@id/button_next"
+                android:text="@string/fui_next_default"
+                style="@style/FirebaseUI.Button" />
+            <TextView
+                android:id="@id/email_tos_and_pp_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                android:textIsSelectable="false"
+                style="@style/FirebaseUI.Text.BodyText" />
+            <TextView
+                android:id="@id/email_footer_tos_and_pp_text"
+                style="@style/FirebaseUI.PrivacyFooter" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

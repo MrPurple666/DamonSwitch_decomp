@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/bg_white_radius_6"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/select_bios_close"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+    <TextView
+        android:textSize="@dimen/text_size_title"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="left"
+        android:id="@id/select_bios_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing_big"
+        android:layout_marginTop="@dimen/activity_horizontal_spacing"
+        android:text="@string/switch_my_bios" />
+    <TextView
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/ic_color_active"
+        android:gravity="center"
+        android:id="@id/select_bios_scan"
+        android:background="@drawable/background_corner_trans_free"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="4.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing_big"
+        android:text="@string/scan_again"
+        android:layout_toLeftOf="@id/select_bios_close"
+        android:layout_alignTop="@id/select_bios_title" />
+    <TextView
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="left"
+        android:id="@id/select_bios_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing_big"
+        android:layout_marginTop="4.0dip"
+        android:text="@string/snackbar_select_bios"
+        android:layout_below="@id/select_bios_title" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center"
+        android:id="@id/select_bios_btn"
+        android:background="@drawable/ripple2"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_margin="@dimen/activity_vertical_spacing"
+        android:text="@android:string/ok"
+        android:layout_alignParentBottom="true" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/select_bios_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_above="@id/select_bios_btn"
+        android:layout_below="@id/select_bios_content" />
+    <View
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip" />
+</RelativeLayout>

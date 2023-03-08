@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:title="EE Recompiler"
+        android:key="enableEE"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="IOP Recompiler"
+        android:key="enableIOP"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="VU Recompiler"
+        android:key="enableVU"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="Threading VU"
+        android:key="vuThread"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="VIF Recompiler"
+        android:key="enableVIF"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="@string/pref_system_fastyuv2rgb"
+        android:key="fastYUV2RGB"
+        android:summary="@string/pref_system_fastyuv2rgb_summary"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="Show development info"
+        android:key="ShowDevInfo"
+        android:defaultValue="false" />
+    <SwitchPreference
+        android:title="Show extra development info"
+        android:key="ShowDevExtraInfo"
+        android:defaultValue="false" />
+    <SwitchPreference
+        android:title="GS: OGL Queue"
+        android:key="UseMyQueue"
+        android:defaultValue="true" />
+</PreferenceScreen>

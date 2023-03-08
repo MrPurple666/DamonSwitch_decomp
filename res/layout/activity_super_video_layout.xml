@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@id/video_view_exo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="280.0dip"
+        app:use_controller="false" />
+    <ImageView
+        android:id="@id/video_view_poster"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:minHeight="280.0dip" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@id/app_video_top_box"
+        android:background="#88000000"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+        <ImageView
+            android:id="@id/app_video_finish"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="50.0dip"
+            android:src="@drawable/icon_left"
+            android:layout_centerVertical="true" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/view_jky_player_top_right"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:textSize="16.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/video_item_play"
+                android:layout_width="46.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="2.0dip"
+                android:layout_marginBottom="2.0dip"
+                android:src="@drawable/icon_playgame"
+                android:layout_alignParentRight="true" />
+            <ImageView
+                android:textSize="16.0dip"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@id/btn_media_play_share_top"
+                android:padding="4.0dip"
+                android:layout_width="46.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/appbar_padding_top"
+                android:src="@drawable/icon_share"
+                android:onClick="buttonClick" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="#fff2f2f2"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/view_jky_play_iv_scale"
+                android:background="@drawable/background_item_corner_trans"
+                android:layout_width="46.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="6.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:text="@string/full_screen" />
+            <TextView
+                android:textSize="10.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/video_item_criticism"
+                android:paddingTop="2.0dip"
+                android:paddingBottom="2.0dip"
+                android:layout_width="46.0dip"
+                android:layout_height="fill_parent"
+                android:drawableTop="@drawable/icon_criticism"
+                android:layout_toLeftOf="@id/video_item_praise"
+                android:lineSpacingExtra="-3.0dip" />
+            <TextView
+                android:textSize="10.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/video_item_praise"
+                android:paddingTop="2.0dip"
+                android:paddingBottom="2.0dip"
+                android:layout_width="46.0dip"
+                android:layout_height="fill_parent"
+                android:drawableTop="@drawable/icon_praise"
+                android:layout_alignParentRight="true"
+                android:lineSpacingExtra="-3.0dip" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="#fff2f2f2"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/view_jky_play_iv_speed"
+                android:background="@drawable/background_item_corner_trans"
+                android:visibility="gone"
+                android:layout_width="52.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="6.0dip"
+                android:layout_marginBottom="6.0dip"
+                android:text="1.0" />
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@id/view_jky_play_iv_setting"
+                android:padding="10.0dip"
+                android:visibility="gone"
+                android:layout_width="52.0dip"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_setting" />
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@id/view_jky_player_iv_share"
+                android:padding="10.0dip"
+                android:visibility="gone"
+                android:layout_width="52.0dip"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ijkplayer_ic_share" />
+        </LinearLayout>
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="@android:color/white"
+            android:ellipsize="marquee"
+            android:id="@id/app_video_title"
+            android:paddingTop="10.0dip"
+            android:paddingBottom="10.0dip"
+            android:visibility="visible"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-10.0dip"
+            android:text="title"
+            android:singleLine="true"
+            android:layout_toLeftOf="@id/view_jky_player_top_right"
+            android:layout_toRightOf="@id/app_video_finish"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@id/app_video_bottom_box_exo"
+        android:background="#88000000"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="-40.0dip"
+        android:layout_below="@id/video_view_exo">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/app_video_play_exo"
+            android:padding="8.0dip"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@drawable/ijkplayer_ic_pause" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@android:color/white"
+            android:id="@id/app_video_currentTime_exo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="00:00"
+            android:layout_toRightOf="@id/app_video_play_exo"
+            android:layout_centerVertical="true" />
+        <SeekBar
+            android:id="@id/app_video_seekBar_exo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.0dip"
+            android:layout_marginRight="3.0dip"
+            android:layout_toLeftOf="@id/app_video_endTime_exo"
+            android:layout_toRightOf="@id/app_video_currentTime_exo"
+            android:layout_centerVertical="true"
+            style="@style/SeekBarAppTheme" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@android:color/white"
+            android:id="@id/app_video_endTime_exo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01:10"
+            android:layout_toLeftOf="@id/view_jky_player_fullscreen_exo"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@id/view_jky_player_fullscreen_exo"
+            android:padding="8.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ijkplayer_ic_enlarge"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@android:color/white"
+        android:id="@id/app_video_status"
+        android:background="@color/translucent_background"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginTop="50.0dip"
+        android:text="Buffering..."
+        android:alpha="0.5" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@id/video_ad_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</RelativeLayout>

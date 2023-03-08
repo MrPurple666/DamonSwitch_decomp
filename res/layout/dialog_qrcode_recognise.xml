@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:paddingTop="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="348.0dip"
+    android:minWidth="260.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center"
+        android:id="@id/dialog_qrcode_share_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share_detect_code" />
+    <com.damonplay.alib.uiUtil.JustifyTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/ic_color_active"
+        android:gravity="center|left"
+        android:id="@id/dialog_qrcode_share_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="48.0dip"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textScaleX="0.9"
+        android:layout_below="@id/dialog_qrcode_share_title" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/dialog_qrcode_share_password_layout"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_below="@id/dialog_qrcode_share_tv">
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:layout_width="42.0dip"
+            android:layout_height="fill_parent"
+            android:text="@string/password" />
+        <EditText
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_gray"
+            android:textColorHint="@color/text_color_gray"
+            android:gravity="center|left"
+            android:id="@id/dialog_qrcode_share_password_et"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:hint="@string/input_pin_text"
+            android:maxLines="1"
+            android:maxLength="4"
+            android:inputType="number" />
+    </LinearLayout>
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:gravity="center|left"
+        android:autoLink="web"
+        android:id="@id/dialog_qrcode_share_disclaimer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="16.0dip"
+        android:text="@string/playdrive_desc_8"
+        android:layout_below="@id/dialog_qrcode_share_password_layout" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/dialog_qrcode_recongise_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/dialog_qrcode_save_btn"
+            android:layout_width="0.0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:text="@string/share_recongise_code"
+            android:layout_weight="1.0" />
+        <View
+            android:id="@id/dialog_qrcode_share_line"
+            android:background="@color/colorMyDark"
+            android:layout_width="1.0px"
+            android:layout_height="32.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginBottom="4.0dip" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/dialog_qrcode_cancel_btn"
+            android:layout_width="0.0dip"
+            android:layout_height="40.0dip"
+            android:text="@android:string/cancel"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+    <View
+        android:background="@color/colorMyDark"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="16.0dip"
+        android:layout_above="@id/dialog_qrcode_recongise_btn_layout" />
+    <ProgressBar
+        android:id="@id/dialog_qrcode_share_progressBar"
+        android:visibility="gone"
+        android:layout_width="90.0dip"
+        android:layout_height="90.0dip"
+        android:layout_marginTop="68.0dip"
+        android:layout_centerHorizontal="true"
+        style="?android:progressBarStyle" />
+</RelativeLayout>

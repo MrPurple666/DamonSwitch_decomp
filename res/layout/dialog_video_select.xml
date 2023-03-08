@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="260.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/dialog_close"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/video_select_recyclerview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/dialog_close"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <ProgressBar
+        android:id="@id/Dialog_ProgressBar"
+        android:visibility="gone"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        android:layout_centerInParent="true"
+        style="?android:progressBarStyle" />
+</RelativeLayout>

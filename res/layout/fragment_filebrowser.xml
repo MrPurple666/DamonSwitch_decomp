@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/filebrowser_top_line"
+        android:background="@color/colorMyDark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAppearance="?textAppearancePopupMenuHeader"
+            android:textSize="12.0sp"
+            android:textColor="@color/colorMyGrayer"
+            android:id="@id/filebrowser_currentpath"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:text="please give permission to access storage"
+            android:layout_weight="1.0" />
+        <RadioButton
+            android:id="@id/filebrowser_radio_viewreturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/ic_return"
+            android:onClick="onRadioButtonClicked" />
+        <RadioButton
+            android:textColor="@color/colorMyGrayer"
+            android:id="@id/filebrowser_radio_viewhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:button="@drawable/ic_home"
+            android:onClick="onRadioButtonClicked" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/filebrowser"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip"
+        android:layout_below="@id/filebrowser_top_line"
+        app:layoutManager="LinearLayoutManager"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/progressBar_layout"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/qr_code_white"
+            android:gravity="center"
+            android:id="@id/progressBar_text"
+            android:layout_width="fill_parent"
+            android:layout_height="24.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:text="@string/ConvertDialog_wait" />
+        <ProgressBar
+            android:id="@id/progressBar_1"
+            android:layout_width="90.0dip"
+            android:layout_height="90.0dip"
+            android:layout_marginBottom="160.0dip"
+            style="?android:progressBarStyle" />
+    </LinearLayout>
+</RelativeLayout>

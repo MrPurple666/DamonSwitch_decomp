@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_gravity="end|bottom|center"
+        android:id="@id/bnv_menu"
+        android:background="@color/colorPrimary"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/main_bottom_selector"
+        app:itemTextColor="@drawable/main_bottom_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_main"
+        style="@style/Widget.Design.BottomNavigationView" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_gravity="end|bottom|center"
+        android:id="@id/fab"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:borderWidth="0.0dip"
+        app:elevation="16.0dip" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bnv_menu" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ProgressBar
+            android:id="@id/StartEmu_ProgressBar"
+            android:visibility="gone"
+            android:layout_width="96.0dip"
+            android:layout_height="96.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            style="?android:progressBarStyle" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/StartEmu_ProgressText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/BootingGame"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

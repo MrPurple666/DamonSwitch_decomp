@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="@dimen/activity_horizontal_spacing_big"
+    android:minWidth="200.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/background_dialog_corner_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="40.0dip">
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@id/btn_close"
+            android:src="@mipmap/ic_close"
+            style="@style/dialog_close_style" />
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+            android:layout_marginTop="-5.0dip"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing"
+            android:text="@string/free_back" />
+        <ImageView
+            android:id="@id/archive_img"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+            android:layout_marginTop="@dimen/activity_vertical_spacing"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing"
+            android:minHeight="200.0dip" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/dialog_text_input_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_spacing"
+            android:layout_marginTop="@dimen/activity_vertical_spacing"
+            android:layout_marginRight="@dimen/activity_vertical_spacing"
+            android:layout_below="@id/dialog_title"
+            app:counterEnabled="true"
+            app:counterMaxLength="32"
+            app:counterTextColor="@color/ic_color_active"
+            app:expandedHintEnabled="true"
+            app:helperTextTextColor="@color/text_color_white_light"
+            app:hintTextColor="@color/ic_color_active">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:id="@id/archive_descTv"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="90.0dip"
+                android:layout_marginTop="10.0dip"
+                android:hint="@string/editdesc"
+                android:maxLines="32"
+                android:layout_marginStart="@dimen/activity_vertical_spacing"
+                android:layout_marginEnd="@dimen/activity_vertical_spacing" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:textSize="16.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_product_payed"
+            android:gravity="center"
+            android:id="@id/upandshare"
+            android:background="@color/text_color_gray_deep"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height_46"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/syncandshare"
+            android:lines="1"
+            android:layout_marginStart="@dimen/activity_vertical_spacing_large"
+            android:layout_marginEnd="@dimen/activity_vertical_spacing_large" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/onlyupTv"
+            android:background="@color/text_color_gray_deep"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height_46"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/synconly"
+            android:lines="1"
+            android:layout_marginStart="@dimen/activity_vertical_spacing_large"
+            android:layout_marginEnd="@dimen/activity_vertical_spacing_large" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/cancel"
+            android:background="@color/text_color_gray_deep"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height_46"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginBottom="22.0dip"
+            android:text="@android:string/cancel"
+            android:lines="1"
+            android:layout_marginStart="@dimen/activity_vertical_spacing_large"
+            android:layout_marginEnd="@dimen/activity_vertical_spacing_large" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

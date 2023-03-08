@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/activity_login_email_reset_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            style="@style/FirebaseUI.WrapperStyle">
+            <TextView
+                android:text="@string/fui_password_recovery_body"
+                style="@style/FirebaseUI.Text.BodyText" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/email_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                app:errorEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.EmailField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/email"
+                    style="@style/FirebaseUI.TextInputEditText.EmailField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@id/button_done"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                android:text="@string/fui_button_text_send"
+                android:onClick="onClick"
+                style="@style/FirebaseUI.Button" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

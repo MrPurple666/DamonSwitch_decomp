@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/activity_traffic_pay"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/titlebar_simple"
+        layout="@layout/layout_titlebar_simple" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titlebar_simple">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:textSize="@dimen/text_size_big"
+                android:textColor="@color/ic_color_active"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_spacing"
+                android:text="@string/donatedialog_content_three" />
+            <TextView
+                android:textSize="@dimen/text_size_title_big"
+                android:textColor="@color/text_color_white_light"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_spacing"
+                android:layout_marginRight="@dimen/activity_vertical_spacing"
+                android:layout_marginBottom="@dimen/activity_vertical_spacing"
+                android:text="@string/thanks_support" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/traffic_pay_recyclerview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+                android:layout_marginTop="@dimen/activity_horizontal_spacing"
+                android:layout_marginRight="@dimen/activity_horizontal_spacing"
+                xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

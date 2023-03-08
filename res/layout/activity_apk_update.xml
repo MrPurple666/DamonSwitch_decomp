@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/title_bar"
+        layout="@layout/layout_titlebar_simple" />
+    <TextView
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/text_color_gray"
+        android:gravity="left"
+        android:id="@id/apk_update_select"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        android:layout_below="@id/title_bar" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/apk_update_select">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip">
+            <TextView
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/text_color_gray"
+                android:id="@id/apk_update_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/text_color_gray"
+                android:textColorHint="@color/color_bg_light"
+                android:id="@id/apk_update_description_cn"
+                android:layout_width="fill_parent"
+                android:layout_height="220.0dip"
+                android:hint="版本升级中文描述" />
+            <EditText
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/text_color_gray"
+                android:textColorHint="@color/color_bg_light"
+                android:id="@id/apk_update_description_en"
+                android:layout_width="fill_parent"
+                android:layout_height="220.0dip"
+                android:layout_marginTop="10.0dip"
+                android:hint="版本升级英文描述" />
+            <Button
+                android:id="@id/apk_update_upload"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mine_item_height"
+                android:text="确认信息无误，提交" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@id/select_dialog_progress_layout"
+        android:background="@color/qr_code_finder_mask"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true">
+        <ProgressBar
+            android:id="@id/select_dialog_progress_bar"
+            android:layout_width="108.0dip"
+            android:layout_height="108.0dip"
+            android:layout_centerInParent="true"
+            style="?android:progressBarStyle" />
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="@color/qr_code_white"
+            android:gravity="center"
+            android:id="@id/select_dialog_progress_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+</RelativeLayout>

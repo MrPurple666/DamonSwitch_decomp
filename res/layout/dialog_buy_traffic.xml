@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:paddingTop="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="360.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/colorMyDark"
+        android:gravity="left"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:text="您的流量不足"
+        android:layout_below="@id/dialog_qrcode_share_image" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="20.0dip">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/dialog_buy_traffic_main_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/colorMyDark"
+        android:gravity="left"
+        android:id="@id/dialog_buy_traffic_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:text="流量购买后立即生效，请放心使用！" />
+</LinearLayout>

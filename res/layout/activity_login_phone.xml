@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/activity_login_phone_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Spinner
+        android:textSize="14.0sp"
+        android:entries="@array/country_arrays"
+        android:id="@id/country_list"
+        android:layout_width="140.0dip"
+        android:layout_marginStart="32.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/phone_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/FirebaseUI.CountrySpinner" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:textSize="14.0sp"
+        android:id="@id/phone_layout"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.0dip"
+        android:layout_marginEnd="32.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/country_list"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/FirebaseUI.TextInputLayout.PhoneField">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:textSize="14.0sp"
+            android:id="@id/input_phone"
+            android:imeOptions="actionDone"
+            style="@style/FirebaseUI.TextInputEditText.PhoneField" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:textSize="14.0sp"
+        android:id="@id/input_verificationCode"
+        android:layout_width="140.0dip"
+        android:layout_height="36.0dip"
+        android:layout_marginTop="27.0dip"
+        android:hint="@string/verification_code"
+        android:maxLength="6"
+        android:inputType="number"
+        android:layout_marginStart="32.0dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_layout" />
+    <Button
+        android:textSize="12.0sp"
+        android:id="@id/btn_sendVerificationCode"
+        android:layout_width="0.0dip"
+        android:layout_height="48.0dip"
+        android:text="@string/send_verification_code"
+        android:onClick="onClick"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="32.0dip"
+        app:layout_constraintBaseline_toBaselineOf="@id/input_verificationCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@id/input_verificationCode"
+        style="@style/FirebaseUI.Button" />
+    <Button
+        android:textSize="12.0sp"
+        android:id="@id/btn_login"
+        android:layout_width="0.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginTop="32.0dip"
+        android:text="@string/login"
+        android:onClick="onClick"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginEnd="32.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_verificationCode"
+        style="@style/FirebaseUI.Button" />
+    <ProgressBar
+        android:id="@id/loginProgressBar"
+        android:visibility="invisible"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        android:elevation="2.0dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        style="?android:progressBarStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

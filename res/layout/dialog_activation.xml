@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:background="@drawable/background_dialog_corner_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_spacing_large"
+        android:layout_marginRight="@dimen/activity_vertical_spacing_large"
+        android:layout_marginBottom="@dimen/activity_vertical_spacing_large">
+        <ImageView
+            android:id="@id/btn_close"
+            android:src="@mipmap/ic_close"
+            android:layout_alignParentRight="true"
+            style="@style/dialog_close_style" />
+        <TextView
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_white"
+            android:gravity="center"
+            android:id="@id/activation_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+            android:layout_marginBottom="@dimen/activity_vertical_spacing"
+            android:text="@string/activation_code_verify"
+            android:layout_marginStart="@dimen/activity_vertical_spacing"
+            android:layout_marginEnd="@dimen/activity_vertical_spacing" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/bt_red"
+            android:gravity="center|left"
+            android:id="@id/activation_login"
+            android:paddingLeft="@dimen/activity_horizontal_spacing"
+            android:visibility="visible"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:text="@string/actionBar_Login"
+            android:layout_below="@id/activation_title"
+            android:layout_marginStart="@dimen/activity_vertical_spacing"
+            android:layout_marginEnd="@dimen/activity_vertical_spacing" />
+        <include
+            android:id="@id/user_small_layout"
+            android:visibility="invisible"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:layout_below="@id/activation_title"
+            android:layout_marginStart="@dimen/activity_vertical_spacing"
+            android:layout_marginEnd="@dimen/activity_vertical_spacing"
+            layout="@layout/layout_user_small" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/buy_pro_name_content"
+            android:background="@mipmap/background_vip"
+            android:padding="@dimen/activity_horizontal_spacing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8.0dip"
+            android:layout_below="@id/activation_login">
+            <TextView
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_gray_deep"
+                android:id="@id/activation_state"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_spacing"
+                android:text="@string/activation_code_available" />
+            <TextView
+                android:textSize="@dimen/text_size_big"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_spacing_big"
+                android:layout_marginRight="@dimen/activity_vertical_spacing_big"
+                android:text="@string/activation_code_message" />
+            <TextView
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/bt_red"
+                android:id="@id/activation_account_tip"
+                android:visibility="invisible"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_spacing_big"
+                android:layout_marginRight="@dimen/activity_vertical_spacing_big"
+                android:text="@string/activation_has_pro" />
+        </LinearLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buy_pro_name_content">
+            <TextView
+                android:textSize="@dimen/text_size_big"
+                android:textColor="@color/text_color_white"
+                android:gravity="center"
+                android:id="@id/dialog_ok"
+                android:padding="@dimen/activity_horizontal_spacing_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_spacing"
+                android:text="@android:string/ok"
+                android:layout_weight="1.0" />
+            <TextView
+                android:textSize="@dimen/text_size_big"
+                android:textColor="@color/text_color_white"
+                android:gravity="center"
+                android:id="@id/dialog_cancel"
+                android:padding="@dimen/activity_horizontal_spacing_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_spacing"
+                android:text="@android:string/cancel"
+                android:layout_weight="1.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

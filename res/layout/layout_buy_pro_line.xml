@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/buy_pro_line_layout"
+    android:background="@mipmap/bg_request_buy_pro"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/menu_item_height"
+    android:layout_marginTop="@dimen/activity_vertical_spacing"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/request_buy_pro_iv"
+        android:layout_width="28.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_marginRight="4.0dip"
+        android:src="@mipmap/ic_request_buy_pro"
+        android:layout_centerVertical="true" />
+    <ImageView
+        android:id="@id/request_buy_pro_next"
+        android:layout_width="28.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4.0dip"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:src="@mipmap/ic_request_buy_next"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36.0dip"
+        android:layout_toRightOf="@id/request_buy_pro_iv"
+        android:layout_centerVertical="true">
+        <TextView
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buy_pro" />
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/product_pro_description"
+            android:lineSpacingMultiplier="0.8" />
+    </LinearLayout>
+</RelativeLayout>

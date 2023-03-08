@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@id/top_progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/FirebaseUI.TopProgressBar" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            style="@style/FirebaseUI.WrapperStyle">
+            <TextView
+                android:id="@id/header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fui_enter_confirmation_code"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/FirebaseUI.Text.T08" />
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/fui_linkColor"
+                android:id="@id/edit_phone_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                style="@style/FirebaseUI.Text.T08" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/confirmation_code_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fui_field_padding_vert"
+                app:layout_constraintTop_toBottomOf="@id/edit_phone_number">
+                <com.firebase.ui.auth.ui.phone.SpacedEditText
+                    android:textSize="32.0sp"
+                    android:typeface="monospace"
+                    android:gravity="center"
+                    android:id="@id/confirmation_code"
+                    android:background="@color/fui_transparent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:fontFamily="monospace"
+                    app:spacingProportion="1.1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:enabled="false"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="?android:textColorSecondary"
+                android:id="@id/ticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                android:textIsSelectable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmation_code_layout"
+                style="@style/FirebaseUI.Text.T08" />
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/fui_linkColor"
+                android:id="@id/resend_code"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                android:text="@string/fui_resend_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ticker"
+                style="@style/FirebaseUI.Text.T08" />
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@id/resend_barrier"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="ticker,resend_code" />
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@id/email_footer_tos_and_pp_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resend_barrier"
+                style="@style/FirebaseUI.PrivacyFooter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

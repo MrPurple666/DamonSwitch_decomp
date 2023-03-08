@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:orientation="vertical"
+        android:id="@id/fragment_top_layout"
+        android:background="@color/color_gray_deep"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@id/toolbarTitleLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_scrollFlags="enterAlways|scroll">
+            <include
+                layout="@layout/layout_app_status" />
+            <include
+                layout="@layout/layout_top_menu" />
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@id/recent_top_menu_layout"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_spacing_tiny"
+            app:layout_scrollFlags="noScroll">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/menu_panel_layout"
+                android:visibility="visible"
+                android:layout_width="fill_parent"
+                android:layout_height="36.0dip"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip">
+                <TextView
+                    android:textSize="10.0sp"
+                    android:textColor="@color/colorMyGray"
+                    android:gravity="center"
+                    android:id="@id/btn_recent_rank"
+                    android:background="@drawable/btn_backgroud_myblue"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:drawableRight="@drawable/icon_dropdown"
+                    android:layout_weight="2.0"
+                    android:layout_marginEnd="8.0dip" />
+                <TextView
+                    android:textSize="10.0sp"
+                    android:textColor="@color/colorMyGray"
+                    android:gravity="center"
+                    android:id="@id/btn_recent_autoscan"
+                    android:background="@drawable/btn_backgroud_myblue"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:text="@string/main_recent_top_btn_scan"
+                    android:drawableRight="@drawable/icon_dropdown"
+                    android:layout_weight="2.0"
+                    android:layout_marginEnd="8.0dip" />
+                <TextView
+                    android:textSize="10.0sp"
+                    android:textColor="@color/colorMyGray"
+                    android:gravity="center"
+                    android:id="@id/btn_recent_comm"
+                    android:background="@drawable/btn_backgroud_myblue"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:text="@string/main_recent_top_btn_comm"
+                    android:drawableRight="@drawable/icon_dropdown"
+                    android:layout_weight="2.0"
+                    android:lineSpacingExtra="-3.0dip"
+                    android:layout_marginEnd="8.0dip" />
+            </LinearLayout>
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:id="@id/recent_search_layout"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip">
+                <com.damonplay.damonps2.uiUtils.SearchPanelView
+                    android:id="@id/recent_search_view"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_toLeftOf="@id/btn_recent_rank2"
+                    android:layout_alignTop="@id/btn_recent_rank2"
+                    android:layout_centerVertical="true" />
+                <TextView
+                    android:textSize="10.0sp"
+                    android:textColor="@color/colorMyGray"
+                    android:gravity="center"
+                    android:id="@id/btn_recent_rank2"
+                    android:background="@drawable/btn_backgroud_myblue"
+                    android:layout_width="86.0dip"
+                    android:layout_height="30.0dip"
+                    android:drawableRight="@drawable/icon_dropdown"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="4.0dip" />
+                <include
+                    android:visibility="visible"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.0dip"
+                    android:layout_below="@id/recent_search_view"
+                    layout="@layout/layout_advanced_search" />
+            </RelativeLayout>
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/recentbrowser"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/recent_center_menu_layout"
+            android:padding="20.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <com.damonplay.damonps2.uiUtils.IconFontTextView
+                android:textSize="48.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_hand_click" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/main_recent_top_btn_scan" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

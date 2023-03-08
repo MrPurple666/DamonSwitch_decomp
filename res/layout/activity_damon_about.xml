@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/mine_user_info_layout"
+        android:background="@color/color_gray_deep"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@id/layout_titlebar_simple"
+            layout="@layout/layout_titlebar_simple" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing"
+            android:layout_below="@id/layout_titlebar_simple">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="96.0dip"
+                android:layout_height="96.0dip"
+                android:layout_marginTop="28.0dip"
+                android:src="@mipmap/ic_logo" />
+            <TextView
+                android:textSize="@dimen/text_size_title_big"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_spacing_big"
+                android:text="@string/app_name" />
+            <TextView
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/text_color_gray"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_spacing_tiny"
+                android:text="@string/versionNameGenerated" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/guide"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+                app:info_name="@string/guide" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_privacy_statement"
+                android:background="#ff3e3e3e"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/privacy_statement" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_service_agreement"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/service_agreement" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_system_permissions"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/system_permissions" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_withdrawprivacypolicy"
+                android:background="@color/color_gray_deep"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/withdrawprivacypolicy" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_close_push"
+                android:background="@color/color_gray_deep"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/close_push" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_app_language"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/damon_about_set_language" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_activation"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/activation_code" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_email"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/pref_about_email"
+                app:info_value="@string/Acknowledgement_summary"
+                app:right_icon="@string/icon_next" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_update"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/check_app_update"
+                app:right_icon="@string/icon_next" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_login_history"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/login_in_history"
+                app:right_icon="@string/icon_next" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_thanks"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_item_height"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/Acknowledgement_title"
+                app:info_value="@string/Acknowledgement_summary"
+                app:right_icon_visible="8" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+                android:layout_marginBottom="@dimen/activity_vertical_spacing_large">
+                <TextView
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/text_color_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@id/about_build_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_spacing_tiny"
+                    android:text="@string/pref_about_buildtime" />
+                <TextView
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/text_color_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@id/about_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_spacing_tiny"
+                    android:text="@string/pref_about_company" />
+                <TextView
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/text_color_gray"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_spacing_tiny"
+                    android:layout_marginBottom="@dimen/activity_vertical_spacing_large"
+                    android:text="@string/pref_about_copyright" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#ff303030"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:background="#ff212121"
+            android:layout_width="fill_parent"
+            android:layout_height="58.0dip">
+            <ImageView
+                android:id="@id/btn_back"
+                android:padding="19.0dip"
+                android:layout_width="58.0dip"
+                android:layout_height="58.0dip"
+                android:src="@drawable/icon_left"
+                android:scaleType="center"
+                android:cropToPadding="true"
+                android:layout_centerVertical="true" />
+            <TextView
+                android:textSize="20.0sp"
+                android:textColor="@android:color/white"
+                android:gravity="center|left"
+                android:id="@id/phone_verify_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/btn_back" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginRight="20.0dip">
+            <TextView
+                android:textSize="12.0sp"
+                android:textStyle="bold"
+                android:textColor="#ffc5c5c5"
+                android:id="@id/phone_verify_global_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:text="@string/login_global"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:onClick="onClick" />
+            <ImageView
+                android:background="@mipmap/ic_logo"
+                android:layout_width="68.0dip"
+                android:layout_height="68.0dip"
+                android:layout_marginTop="40.0dip"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:textSize="@dimen/text_size_tiny"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="center_vertical"
+                android:id="@id/logged_type_last"
+                android:background="@drawable/background_item_corner_trans"
+                android:paddingLeft="4.0dip"
+                android:paddingRight="4.0dip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="330.0dip"
+                android:text="上次登录方式"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="#ffc5c5c5"
+                android:gravity="center"
+                android:id="@id/phone_verify_switch_tv"
+                android:padding="10.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="360.0dip"
+                android:text="@string/switch_other_login"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClick" />
+            <ProgressBar
+                android:id="@id/phone_verify_progressbar"
+                android:visibility="gone"
+                android:layout_width="96.0dip"
+                android:layout_height="96.0dip"
+                android:layout_marginTop="130.0dip"
+                android:layout_centerHorizontal="true"
+                android:indeterminateTint="@color/colorAccent"
+                android:indeterminateTintMode="src_atop"
+                style="?android:progressBarStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

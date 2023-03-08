@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="98.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/user_portrait"
+        android:layout_width="68.0dip"
+        android:layout_height="68.0dip"
+        android:src="@mipmap/ic_user_portrait"
+        android:layout_centerVertical="true"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="0.0dip"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <TextView
+        android:textSize="@dimen/text_size_tiny"
+        android:textColor="@color/text_color_gray"
+        android:id="@id/join_user_group"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_recent_top_btn_comm"
+        android:drawableLeft="@mipmap/ic_user_group"
+        android:drawableRight="@mipmap/ic_next"
+        android:drawablePadding="4.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_toRightOf="@id/user_portrait"
+        android:layout_centerVertical="true">
+        <TextView
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_white_light"
+            android:id="@id/logged_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/actionBar_Login"
+            android:maxLines="2"
+            android:lineSpacingMultiplier="0.8" />
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center_vertical"
+            android:id="@id/logged_type_last"
+            android:background="@drawable/background_item_corner_trans"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="4.0dip"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_spacing_large"
+            android:layout_toRightOf="@id/logged_user_name"
+            android:layout_alignTop="@id/logged_user_name"
+            android:layout_alignBottom="@id/logged_user_name" />
+        <ImageView
+            android:id="@id/account_pro_iv"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="4.0dip"
+            android:layout_width="40.0dip"
+            android:layout_height="32.0dip"
+            android:src="@mipmap/ic_pro_gray"
+            android:layout_below="@id/logged_user_name"
+            android:layout_alignLeft="@id/logged_user_name" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:id="@id/account_donate_layout"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="34.0dip"
+            android:layout_toRightOf="@id/account_pro_iv"
+            android:layout_alignTop="@id/account_pro_iv">
+            <ImageView
+                android:id="@id/account_donate_iv"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="34.0dip"
+                android:layout_marginRight="2.0dip"
+                android:src="@mipmap/ic_donate_gray" />
+            <ImageView
+                android:id="@id/account_donate_iv2"
+                android:focusable="false"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="34.0dip"
+                android:layout_marginRight="2.0dip"
+                android:src="@mipmap/ic_donate" />
+            <ImageView
+                android:id="@id/account_donate_iv3"
+                android:focusable="false"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="34.0dip"
+                android:src="@mipmap/ic_donate" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:textSize="@dimen/text_size_tiny"
+            android:textColor="@color/text_color_gray"
+            android:id="@id/account_damon_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:layout_below="@id/account_pro_iv"
+            android:layout_alignLeft="@id/account_pro_iv" />
+    </RelativeLayout>
+</RelativeLayout>

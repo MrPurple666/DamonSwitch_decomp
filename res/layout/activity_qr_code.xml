@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/qr_code_header_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_titlebar_normal" />
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@id/qr_code_view_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/qr_code_header_bar" />
+    <com.damonplay.damonps2.qrscan.QrCodeFinderView
+        android:id="@id/qr_code_view_finder"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/qr_code_header_bar"
+        android:layout_centerInParent="true" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="180.0dip"
+        android:layout_marginBottom="@dimen/activity_horizontal_spacing_large"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_gravity="right"
+            android:orientation="vertical"
+            android:id="@id/qr_code_iv_flash_light_layout"
+            android:layout_width="140.0dip"
+            android:layout_height="wrap_content">
+            <com.damonplay.damonps2.uiUtils.IconFontTextView
+                android:textSize="@dimen/text_size_icon_huge"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/qr_code_iv_flash_light"
+                android:background="@drawable/btn_background_round"
+                android:layout_width="56.0dip"
+                android:layout_height="56.0dip"
+                android:layout_margin="@dimen/activity_horizontal_spacing"
+                android:text="@string/icon_lightning" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/qr_code_iv_flash_light_text"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qr_code_open_flash_light" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="right"
+            android:layout_gravity="left"
+            android:orientation="vertical"
+            android:id="@id/qr_code_key_layout"
+            android:layout_width="140.0dip"
+            android:layout_height="wrap_content">
+            <com.damonplay.damonps2.uiUtils.IconFontTextView
+                android:textSize="@dimen/text_size_icon_huge"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/qr_code_iv_flash_key"
+                android:background="@drawable/btn_background_round"
+                android:layout_width="56.0dip"
+                android:layout_height="56.0dip"
+                android:layout_margin="@dimen/activity_horizontal_spacing"
+                android:text="@string/icon_key" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sync_paste_code" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:textSize="@dimen/text_size_title"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_spacing"
+        android:text="@string/input_damon_key_tip"
+        android:layout_below="@id/qr_code_header_bar" />
+    <View
+        android:id="@id/qr_code_view_background"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/qr_code_header_bar" />
+</RelativeLayout>

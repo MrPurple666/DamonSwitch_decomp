@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/activity_login_email_changepasswd_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/text_color_white"
+        android:id="@id/change_password_account"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18.0dip" />
+    <TextView
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/text_color_white"
+        android:id="@id/change_password_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.0dip"
+        android:layout_marginRight="18.0dip"
+        android:text="@string/password_update_tip" />
+    <ScrollView
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            style="@style/FirebaseUI.WrapperStyle">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/password_layout_original"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.PasswordField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/password_original"
+                    style="@style/FirebaseUI.TextInputEditText.PasswordField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout
+                android:background="@color/text_color_gray_deep"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/product_item_height">
+                <Button
+                    android:textSize="16.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ic_color_active"
+                    android:gravity="center"
+                    android:id="@id/password_original_check"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/product_item_height"
+                    android:text="@string/verify_fail"
+                    android:lines="1"
+                    android:layout_centerInParent="true" />
+                <ProgressBar
+                    android:id="@id/password_original_check_progress"
+                    android:layout_width="26.0dip"
+                    android:layout_height="26.0dip"
+                    android:layout_marginRight="@dimen/activity_horizontal_spacing_big"
+                    android:layout_toLeftOf="@id/password_original_check"
+                    android:layout_centerVertical="true"
+                    style="?android:progressBarStyle" />
+            </RelativeLayout>
+            <View
+                android:background="@color/color_bg_line"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                android:layout_marginBottom="@dimen/activity_vertical_spacing" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/password_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.NewPasswordField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/update_password"
+                    style="@style/FirebaseUI.TextInputEditText.PasswordField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/password_repeat_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fui_field_padding_vert"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                style="@style/FirebaseUI.TextInputLayout.NewPasswordField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/update_password_repeat"
+                    style="@style/FirebaseUI.TextInputEditText.PasswordField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout
+                android:id="@id/update_button_create"
+                android:background="@color/text_color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/button_height_46">
+                <Button
+                    android:textSize="16.0sp"
+                    android:textColor="@color/text_color_white"
+                    android:gravity="center"
+                    android:id="@id/update_button_create_btn"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="@string/submit"
+                    android:lines="1"
+                    android:layout_centerInParent="true" />
+                <ProgressBar
+                    android:id="@id/update_button_create_progress"
+                    android:visibility="invisible"
+                    android:layout_width="26.0dip"
+                    android:layout_height="26.0dip"
+                    android:layout_marginRight="@dimen/activity_horizontal_spacing_big"
+                    android:layout_toLeftOf="@id/update_button_create_btn"
+                    android:layout_centerVertical="true"
+                    style="?android:progressBarStyle" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

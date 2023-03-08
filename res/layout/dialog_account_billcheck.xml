@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_white_radius_6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="#ff212121"
+            android:gravity="center"
+            android:id="@id/select_bios_title"
+            android:layout_width="fill_parent"
+            android:layout_height="38.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="16.0dip"
+            android:text="@string/snackbar_select_bios" />
+        <ListView
+            android:id="@id/select_bios_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="600.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="16.0dip" />
+        <View
+            android:background="@android:color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip" />
+    </LinearLayout>
+</LinearLayout>

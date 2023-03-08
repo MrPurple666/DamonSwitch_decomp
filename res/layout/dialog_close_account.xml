@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="260.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/dialog_close_btn"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip">
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/dialog_common_title"
+            android:layout_width="fill_parent"
+            android:layout_height="28.0dip"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/account_close" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="left"
+            android:id="@id/dialog_common_content"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="18.0dip"
+            android:text="@string/account_close_describe" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="left"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="18.0dip"
+            android:text="@string/account_close_describe2" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="left"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="18.0dip"
+            android:text="@string/account_close_describe3" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_spacing"
+            app:counterEnabled="true"
+            app:counterMaxLength="32"
+            app:counterTextColor="@color/ic_color_active"
+            app:expandedHintEnabled="true"
+            app:helperTextTextColor="@color/text_color_white_light"
+            app:hintTextColor="@color/ic_color_active">
+            <EditText
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/text_color_white_light"
+                android:background="@drawable/background_corner_trans_free"
+                android:padding="4.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="98.0dip"
+                android:maxLength="32" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/dialog_common_ok_btn"
+            android:background="@drawable/background_btn_corner_dark"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:text="@android:string/ok" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/dialog_common_cancel_btn"
+            android:background="@drawable/background_btn_corner_dark"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:text="@android:string/cancel" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="56.0dip"
+    android:alpha="0.8"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/user_portrait"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:src="@mipmap/ic_user_portrait"
+        android:layout_centerVertical="true"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="0.0dip"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing_tiny"
+        android:layout_toRightOf="@id/user_portrait"
+        android:layout_centerVertical="true">
+        <TextView
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color_white"
+            android:id="@id/logged_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="米斯假"
+            android:maxLines="2"
+            android:lineSpacingMultiplier="0.8" />
+        <ImageView
+            android:id="@id/account_pro_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="20.0dip"
+            android:src="@mipmap/ic_pro_gray"
+            android:layout_below="@id/logged_user_name"
+            android:layout_alignLeft="@id/logged_user_name" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:id="@id/account_donate_layout"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="20.0dip"
+            android:layout_toRightOf="@id/account_pro_iv"
+            android:layout_alignTop="@id/account_pro_iv">
+            <ImageView
+                android:id="@id/account_donate_iv"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="2.0dip"
+                android:src="@mipmap/ic_donate_gray" />
+            <ImageView
+                android:id="@id/account_donate_iv2"
+                android:focusable="false"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="2.0dip"
+                android:src="@mipmap/ic_donate" />
+            <ImageView
+                android:id="@id/account_donate_iv3"
+                android:focusable="false"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@mipmap/ic_donate" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</RelativeLayout>

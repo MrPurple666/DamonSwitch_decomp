@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="38.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/platform_tab_rv"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="32.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/colorMyGray"
+            android:gravity="center"
+            android:id="@id/platform_tab_more"
+            android:background="@drawable/btn_backgroud_myblue"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/all"
+            android:drawableRight="@drawable/icon_dropdown"
+            android:textAllCaps="false"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10.0sp"
+            android:autoSizeMaxTextSize="14.0sp" />
+        <ImageView
+            android:textSize="14.0sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/platform_tab_refresh"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="4.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingBottom="4.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_refresh"
+            android:layout_toLeftOf="@id/platform_tab_more" />
+    </LinearLayout>
+</RelativeLayout>

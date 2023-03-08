@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/activity_login_email_global_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/toolbar_network_error"
+        layout="@layout/layout_network_error" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="horizontal"
+        android:id="@id/activity_login_content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_network_error">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/email_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.0dip"
+                android:layout_marginStart="32.0dip"
+                android:layout_marginEnd="32.0dip"
+                android:transitionName="@string/fui_email_field_name"
+                android:transitionGroup="true"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/FirebaseUI.TextInputLayout.EmailField">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@id/email"
+                    style="@style/FirebaseUI.TextInputEditText.EmailField" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:textSize="12.0sp"
+                android:id="@id/btn_login"
+                android:layout_width="0.0dip"
+                android:layout_height="46.0dip"
+                android:text="@string/login"
+                android:onClick="onClick"
+                android:layout_marginStart="32.0dip"
+                android:layout_marginEnd="32.0dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email_layout"
+                style="@style/FirebaseUI.Button" />
+            <Button
+                android:textSize="12.0sp"
+                android:id="@id/btn_skiplogin"
+                android:layout_width="0.0dip"
+                android:layout_height="46.0dip"
+                android:text="@string/skiplogin"
+                android:onClick="onClick"
+                android:layout_marginStart="32.0dip"
+                android:layout_marginEnd="32.0dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_login"
+                style="@style/FirebaseUI.Button" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:textSize="12.0sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/txt_or"
+            android:layout_width="28.0dip"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textAlignment="center" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <TextView
+                android:textSize="12.0sp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:id="@id/txt_chinalogin"
+                android:padding="10.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_china"
+                android:onClick="onClick"
+                android:textAllCaps="false"
+                android:layout_marginEnd="32.0dip" />
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:id="@id/txt_phonelogin"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:text="Login with phone >>"
+                android:onClick="onClick"
+                android:layout_marginEnd="32.0dip" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginTop="32.0dip">
+                <ImageView
+                    android:id="@id/login_google"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_weight="1.0"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/umeng_socialize_google" />
+                <ImageView
+                    android:id="@id/login_facebook_icon"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_weight="1.0"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/umeng_socialize_facebook" />
+                <ImageView
+                    android:id="@id/login_twitter_icon"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_weight="1.0"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/umeng_socialize_twitter" />
+                <ImageView
+                    android:id="@id/login_sms"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_weight="1.0"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/umeng_socialize_sms" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <com.facebook.login.widget.LoginButton
+                android:id="@id/login_facebook"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                android:id="@id/login_twitter"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ProgressBar
+        android:id="@id/loginProgressBar"
+        android:visibility="gone"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        android:layout_centerInParent="true"
+        android:elevation="2.0dip"
+        style="?android:progressBarStyle" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@id/loginTextView"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logining"
+        android:layout_below="@id/loginProgressBar"
+        android:elevation="2.0dip" />
+    <TextView
+        android:textSize="12.0sp"
+        android:id="@id/txt_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

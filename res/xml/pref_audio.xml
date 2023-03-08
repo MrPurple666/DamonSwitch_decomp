@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:title="@string/pref_audio_mute"
+        android:key="AudioMute"
+        android:summary="@string/pref_audio_mute_summary"
+        android:defaultValue="false" />
+    <SwitchPreference
+        android:title="@string/pref_audio_disableeffect"
+        android:key="AudioDisableEffect"
+        android:summary="@string/pref_audio_disableeffect_summary"
+        android:defaultValue="true" />
+    <ListPreference
+        android:entries="@array/audio_sync_mode_entries"
+        android:title="@string/pref_audio_synchmode"
+        android:key="AudioSynchMode"
+        android:defaultValue="1"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/audio_sync_mode_entries_value" />
+</PreferenceScreen>

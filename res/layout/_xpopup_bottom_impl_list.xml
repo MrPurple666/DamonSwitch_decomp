@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="17.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/_xpopup_title_color"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@id/tv_title"
+        android:paddingTop="14.0dip"
+        android:paddingBottom="14.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingStart="18.0dip"
+        android:paddingEnd="18.0dip" />
+    <include
+        layout="@layout/_xpopup_divider" />
+    <com.lxj.xpopup.widget.VerticalRecyclerView
+        android:orientation="vertical"
+        android:id="@id/recyclerView"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:overScrollMode="never"
+        android:layout_marginStart="4.0dip"
+        android:layout_marginEnd="4.0dip" />
+    <View
+        android:id="@id/vv_divider"
+        android:background="#fff5f5f5"
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip" />
+    <TextView
+        android:textSize="15.0sp"
+        android:textColor="@color/_xpopup_title_color"
+        android:gravity="center"
+        android:id="@id/tv_cancel"
+        android:paddingTop="15.0dip"
+        android:paddingBottom="15.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/xpopup_cancel" />
+</LinearLayout>

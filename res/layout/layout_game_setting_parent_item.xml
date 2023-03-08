@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.damonplay.damonps2.uiUtils.IconFontTextView
+        android:textSize="20.0sp"
+        android:textColor="@color/text_color_gray"
+        android:id="@id/gamesetting_parent_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginTop="6.0dip"
+        android:text="@string/icon_down"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6.0dip"
+        android:layout_toRightOf="@id/gamesetting_parent_indicator"
+        android:layout_centerVertical="true">
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="left"
+            android:id="@id/gamesetting_parent_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pref_system_SystemSpeedTweak" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/text_color_gray"
+            android:id="@id/gamesetting_parent_value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_game_setting_compatible"
+            android:layout_below="@id/gamesetting_parent_item_name"
+            android:layout_alignLeft="@id/gamesetting_parent_item_name" />
+    </LinearLayout>
+    <View
+        android:id="@id/gamesetting_parent_item_line"
+        android:background="@color/colorMyDark"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

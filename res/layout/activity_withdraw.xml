@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/mine_user_info_layout"
+        android:background="@color/color_gray_deep"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@id/layout_titlebar_pm"
+            layout="@layout/layout_titlebar_simple" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing_large"
+            android:layout_marginTop="@dimen/activity_vertical_spacing"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_large">
+            <TextView
+                android:textSize="30.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_white_light"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                android:text="@string/withdrawprivacypolicy" />
+            <TextView
+                android:textSize="22.0sp"
+                android:textColor="@color/text_color_white_light"
+                android:id="@id/toWichTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                android:text="@string/withdrawprivacypolicyContent" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/text_color_gray"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                android:text="@string/withdrawprivacypolicyContentOne" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/red_import"
+                android:background="@drawable/background_item_corner_trans"
+                android:padding="@dimen/dp_10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_spacing_big"
+                android:text="@string/withdrawprivacypolicyContentRed" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/text_color_gray"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                android:text="@string/withdrawprivacypolicyContenttwo" />
+            <Button
+                android:textColor="@color/white"
+                android:id="@id/withdrawprivacypolicyBtone"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="20.0dip"
+                android:text="@string/withdrawprivacypolicyBtone"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_40" />
+            <Button
+                android:textColor="@color/white"
+                android:id="@id/withdrawprivacypolicyBttwo"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="20.0dip"
+                android:text="@string/withdrawprivacypolicyBttwo"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_40" />
+            <Button
+                android:textColor="@color/white"
+                android:id="@id/withdrawprivacypolicyBtthree"
+                android:background="@color/color_gray_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="20.0dip"
+                android:text="@string/withdrawprivacypolicyBtthree"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_40" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

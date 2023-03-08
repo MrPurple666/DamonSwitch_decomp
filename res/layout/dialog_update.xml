@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/update_dialog_top"
+        android:background="@drawable/ic_dialog_global"
+        android:layout_width="fill_parent"
+        android:layout_height="140.0dip" />
+    <ScrollView
+        android:id="@id/update_dialog_scroll"
+        android:background="@drawable/bg_white_half_radius_6"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/update_dialog_top">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="40.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="16.0dip">
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/ic_color_active"
+                android:id="@id/tv_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_spacing_tiny" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/ic_color_active"
+                android:id="@id/tv_size"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_spacing_tiny"
+                android:layout_marginTop="8.0dip" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/text_color_white_light"
+                android:id="@id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                android:lineSpacingMultiplier="1.1" />
+        </LinearLayout>
+    </ScrollView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/update_dialog_scroll">
+        <ProgressBar
+            android:id="@id/progressbar_2"
+            android:visibility="invisible"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginBottom="4.0dip"
+            android:layout_below="@id/tv_description"
+            style="?android:progressBarStyleHorizontal" />
+        <Button
+            android:theme="@style/Button"
+            android:textColor="@android:color/white"
+            android:id="@id/btn_update"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:text="@string/appupdate_update" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:layout_gravity="center"
+        android:id="@id/line"
+        android:background="@android:color/white"
+        android:layout_width="2.0dip"
+        android:layout_height="30.0dip"
+        android:layout_below="@id/update_dialog_scroll" />
+    <ImageButton
+        android:layout_gravity="center"
+        android:id="@id/ib_close"
+        android:background="@drawable/ic_dialog_close"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_below="@id/line"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

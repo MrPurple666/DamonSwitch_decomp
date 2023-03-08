@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="260.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/dialog_close"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+    <ProgressBar
+        android:id="@id/dialog_qrcode_share_progressBar"
+        android:layout_width="90.0dip"
+        android:layout_height="90.0dip"
+        android:layout_centerInParent="true"
+        style="?android:progressBarStyle" />
+    <TextView
+        android:textSize="22.0sp"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center|left"
+        android:id="@id/dialog_sync_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:minHeight="40.0dip"
+        android:layout_below="@id/dialog_close" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textStyle="italic"
+        android:textColor="@color/bt_red"
+        android:gravity="center|left"
+        android:id="@id/dialog_sync_reason_title"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:text="@string/sync_share_dialog_4"
+        android:layout_below="@id/dialog_sync_tv" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center|left"
+        android:autoLink="email"
+        android:id="@id/dialog_sync_reason"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:minHeight="50.0dip"
+        android:layout_below="@id/dialog_sync_reason_title" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/dialog_sync_error_layout"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_below="@id/dialog_sync_reason">
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="italic"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/dialog_sync_error_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:text="@string/sync_share_dialog_6"
+            android:layout_weight="1.0" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="left"
+            android:id="@id/dialog_sync_error_romName"
+            android:scrollbars="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:minHeight="10.0dip"
+            android:layout_below="@id/dialog_sync_error_title" />
+        <TextView
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/dialog_qrcode_callback_btn"
+            android:background="@drawable/ripple2"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/product_item_height"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/RecommendGameSettingNegativeP0"
+            android:layout_below="@id/dialog_sync_error_romName" />
+    </RelativeLayout>
+    <TextView
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center"
+        android:id="@id/dialog_qrcode_share_btn"
+        android:background="@drawable/ripple2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/product_item_height"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="10.0dip"
+        android:text="@android:string/ok"
+        android:layout_below="@id/dialog_sync_error_layout" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/dialog_qrcode_share_btn" />
+</RelativeLayout>

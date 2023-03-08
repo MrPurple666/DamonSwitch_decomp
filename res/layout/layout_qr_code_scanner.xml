@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerHorizontal="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/qr_code_fl_scanner"
+        android:layout_width="250.0dip"
+        android:layout_height="250.0dip"
+        android:layout_marginTop="80.0dip"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

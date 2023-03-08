@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/fragment_top_layout"
+        android:background="@color/color_gray_deep"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@id/toolbarTitleLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_scrollFlags="enterAlways|scroll">
+            <include
+                layout="@layout/layout_app_status_landscape" />
+            <include
+                layout="@layout/layout_top_menu" />
+        </RelativeLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_gravity="center"
+            android:id="@id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="36.0dip"
+            android:layout_centerInParent="true"
+            app:tabIndicatorFullWidth="false"
+            app:tabMinWidth="80.0dip"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="10.0dip"
+            app:tabPaddingStart="10.0dip" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@id/lay_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

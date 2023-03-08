@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/colorMyDarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/input_pin_text" />
+    <EditText
+        android:textSize="18.0sp"
+        android:textColor="@color/colorMyDarker"
+        android:gravity="center"
+        android:id="@id/pin_code_et"
+        android:layout_width="220.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="20.0dip"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:inputType="number" />
+    <TextView
+        android:textSize="10.0sp"
+        android:textColor="@color/colorMyBlue"
+        android:id="@id/pin_code_tip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:text="@string/qr_code_password_check" />
+    <Button
+        android:id="@id/btn_ok"
+        android:layout_width="220.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:text="@android:string/ok" />
+</LinearLayout>

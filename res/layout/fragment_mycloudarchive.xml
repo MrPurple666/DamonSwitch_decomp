@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@id/cloudtopRl"
+        android:background="@color/transparent_half"
+        android:layout_width="fill_parent"
+        android:layout_height="32.0dip">
+        <TextView
+            android:textColor="@color/white"
+            android:gravity="center|left"
+            android:id="@id/mycloudarchiveTv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_marginStart="10.0dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/appbarCoinLayout"
+            android:background="@drawable/ripple3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@id/appbarCoinImage"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:src="@drawable/ic_coin"
+                android:scaleType="fitXY" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/text_color_white_light"
+                android:gravity="right"
+                android:id="@id/appbarCoinText"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="2.0dip"
+                android:minWidth="36.0sp"
+                android:text="0" />
+            <ImageView
+                android:id="@id/appbarCoinAddImage"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:layout_marginLeft="2.0dip"
+                android:src="@mipmap/ic_add"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/toolbar_network_error_archive"
+        android:background="#fffbefe8"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="28.0dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="28.0dip"
+            android:layout_height="28.0dip"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/ic_error"
+            android:scaleType="fitXY" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center|left"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/no_network_status"
+            android:lineSpacingMultiplier="0.7" />
+    </LinearLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:orientation="vertical"
+        android:id="@id/swipeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/mycloudarchive_rv"
+            android:background="@color/transparent_half"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

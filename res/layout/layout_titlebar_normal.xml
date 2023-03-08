@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/activity_title_bar_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.damonplay.damonps2.uiUtils.IconFontTextView
+        android:textSize="@dimen/text_size_icon"
+        android:textColor="@color/text_color_gray"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@id/titlebar_back_ic"
+        android:paddingLeft="@dimen/activity_horizontal_spacing_tiny"
+        android:paddingRight="@dimen/activity_horizontal_spacing_tiny"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing_big"
+        android:text="@string/icon_back"
+        android:layout_alignParentLeft="true" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@id/titlebar_title_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        android:textColor="@color/ic_color_active"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@id/titlebar_menu_tv"
+        android:paddingLeft="@dimen/activity_horizontal_spacing_tiny"
+        android:paddingRight="@dimen/activity_horizontal_spacing_tiny"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

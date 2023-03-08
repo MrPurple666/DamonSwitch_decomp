@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/activity_traffic_pay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/titlebar_simple"
+        layout="@layout/layout_titlebar_simple" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/traffic_pay_read_check_layout"
+        android:layout_below="@id/titlebar_simple">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center|left"
+                android:layout_gravity="center_vertical"
+                android:id="@id/traffic_pay_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/traffic_pay_recyclerview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+                android:layout_marginRight="@dimen/activity_horizontal_spacing"
+                xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@id/traffic_pay_read_check_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_alignParentBottom="true">
+        <CheckBox
+            android:layout_gravity="center_vertical"
+            android:id="@id/traffic_pay_read_check"
+            android:clickable="false"
+            android:layout_width="28.0dip"
+            android:layout_height="28.0dip"
+            android:checked="true"
+            android:onClick="onViewClick" />
+        <TextView
+            android:textSize="14.0dip"
+            android:textColor="@color/colorMyGray"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/traffic_pay_read_text"
+            android:paddingLeft="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/buy_traffic_read_description"
+            android:onClick="onViewClick" />
+    </LinearLayout>
+</RelativeLayout>

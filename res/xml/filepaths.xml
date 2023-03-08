@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path
+        name="umeng_cache"
+        path="umeng_cache/" />
+    <root-path
+        name="opensdk_root"
+        path="" />
+    <external-files-path
+        name="opensdk_external"
+        path="Images/tmp" />
+    <external-files-path
+        name="share_files"
+        path="." />
+    <external-cache-path
+        name="gdt_sdk_download_path1"
+        path="com_qq_e_download" />
+    <cache-path
+        name="gdt_sdk_download_path2"
+        path="com_qq_e_download" />
+    <external-path
+        name="app_update"
+        path="DamonPS2/apk" />
+    <external-path
+        name="app_share_dcim"
+        path="DCIM/DamonPS2" />
+    <external-path
+        name="app_share_damon"
+        path="DamonPS2" />
+</paths>

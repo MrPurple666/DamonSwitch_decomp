@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:title="@string/pref_about_version"
+        android:key="Version"
+        android:summary="" />
+    <Preference
+        android:title="@string/pref_about_buildtime"
+        android:key="build_time"
+        android:summary="@string/buildTime" />
+    <Preference
+        android:title="@string/pref_about_company"
+        android:key="build_company"
+        android:summary="@string/pref_about_copyright" />
+    <PreferenceCategory
+        android:title="@string/pref_about_email">
+        <Preference
+            android:title=""
+            android:key="Email"
+            android:summary="" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="Acknowledgement"
+        app:isPreferenceVisible="true">
+        <Preference
+            android:title="@string/Acknowledgement_title"
+            android:key="Acknowledgement"
+            android:summary="@string/Acknowledgement_summary" />
+        <Preference
+            android:enabled="false"
+            android:title="Français, and English"
+            android:summary="Aurelien Pallot, he is also a volunteer of DamonPS2 Facebook Group manager" />
+        <Preference
+            android:enabled="false"
+            android:title="Português"
+            android:summary="Danilo Silva, he is also a volunteer of DamonPS2 Google+ Comunity manager" />
+        <Preference
+            android:enabled="false"
+            android:title="日本語"
+            android:summary="豆腐豬" />
+        <Preference
+            android:enabled="false"
+            android:title="Indonesia"
+            android:summary="Adhika Widyaparaga, Satrio eko W" />
+        <Preference
+            android:enabled="false"
+            android:title="Español"
+            android:summary="Alex Alvarez, Ignacio Elorriaga" />
+        <Preference
+            android:enabled="false"
+            android:title="Deutsche"
+            android:summary="Tizian Everke" />
+        <Preference
+            android:enabled="false"
+            android:title="Italiano"
+            android:summary="Stefano Pranteddu" />
+        <Preference
+            android:enabled="false"
+            android:title="ไทย"
+            android:summary="sazuke0703" />
+        <Preference
+            android:enabled="false"
+            android:title="Dansk"
+            android:summary="Claus Østergaard" />
+        <Preference
+            android:enabled="false"
+            android:title="Eesti"
+            android:summary="Kristjan Krimm" />
+        <Preference
+            android:enabled="false"
+            android:title="Polskie"
+            android:summary="Tomasz" />
+        <Preference
+            android:enabled="false"
+            android:title="Русский"
+            android:summary="Tarkhan Ul'biev" />
+    </PreferenceCategory>
+    <Preference
+        android:title=""
+        android:key="build_host"
+        android:summary="@string/buildhost" />
+</PreferenceScreen>

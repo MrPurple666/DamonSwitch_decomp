@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/root"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@id/top_progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/FirebaseUI.TopProgressBar" />
+    <ImageView
+        android:id="@id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/fui_field_padding_vert"
+        android:layout_marginBottom="@dimen/fui_field_padding_vert"
+        app:layout_constraintBottom_toTopOf="@id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1.0"
+        style="@style/FirebaseUI.AuthMethodPicker.Logo" />
+    <ScrollView
+        android:id="@id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_marginBottom="@dimen/fui_field_padding_vert"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/main_tos_and_pp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintVertical_weight="2.0">
+        <LinearLayout
+            android:gravity="bottom"
+            android:id="@id/btn_holder"
+            style="@style/FirebaseUI.AuthMethodPicker.ButtonHolder" />
+    </ScrollView>
+    <TextView
+        android:textColor="?android:textColorTertiary"
+        android:gravity="center"
+        android:id="@id/main_tos_and_pp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fui_field_padding_vert"
+        android:textIsSelectable="true"
+        android:paddingStart="8.0dip"
+        android:paddingEnd="8.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        style="@style/FirebaseUI.Text.BodyText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

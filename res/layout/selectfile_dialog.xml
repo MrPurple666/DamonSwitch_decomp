@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25.0dip" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:id="@id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="@string/choose_folder_name" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorMyBlueLight"
+        android:gravity="center|right"
+        android:id="@id/whatTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="25.0dip"
+        android:text="@string/whats" />
+    <com.damonplay.damonps2.uiUtils.MyRadioGroup
+        android:orientation="vertical"
+        android:id="@id/radioGroupId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15.0dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mine_item_height">
+            <RadioButton
+                android:layout_gravity="center_vertical"
+                android:id="@id/maleButtonId"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:checked="true" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:id="@id/contentonetitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="1.0dip"
+                android:text="@string/choose_folder_type1" />
+        </LinearLayout>
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center_vertical"
+            android:id="@id/contentoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:layout_marginTop="@dimen/activity_vertical_spacing">
+            <RadioButton
+                android:layout_gravity="center_vertical"
+                android:id="@id/femalButtonId"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:checked="false" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:id="@id/contenttwotitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="1.0dip"
+                android:text="@string/choose_folder_btn1" />
+        </LinearLayout>
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/bt_red"
+            android:layout_gravity="center_vertical"
+            android:id="@id/contenttwoTv"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip" />
+    </com.damonplay.damonps2.uiUtils.MyRadioGroup>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/my_button_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height_46"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing_big"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing_big">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@id/openll"
+            android:background="@mipmap/login_btn_normal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:gravity="center_vertical"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:src="@drawable/icon_file" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:id="@id/openfileBt"
+                android:paddingLeft="@dimen/activity_horizontal_spacing"
+                android:paddingRight="@dimen/activity_horizontal_spacing"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/ok"
+                android:lines="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@id/skipll"
+            android:background="@drawable/my_button_blue"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:gravity="center_vertical"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_marginRight="18.0dip"
+                android:src="@mipmap/alertimg" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:id="@id/describeBt"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/Skip"
+                android:lines="1" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

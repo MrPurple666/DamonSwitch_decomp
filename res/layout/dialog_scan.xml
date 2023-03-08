@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/bg_white_radius_6"
+    android:layout_width="fill_parent"
+    android:layout_height="370.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/dialog_close"
+        android:visibility="gone"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="370.0dip">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/dialog_scan_iv"
+            android:layout_width="58.0dip"
+            android:layout_height="58.0dip"
+            android:layout_margin="@dimen/activity_vertical_spacing"
+            android:src="@mipmap/ic_scan"
+            android:text="@string/icon_scan" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/tv_scan_title"
+            android:layout_width="fill_parent"
+            android:layout_height="38.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="16.0dip"
+            android:text="@string/start_auto_scan" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center|left"
+            android:id="@id/tv_scan_files"
+            android:layout_width="fill_parent"
+            android:layout_height="22.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="16.0dip"
+            android:text="@string/auto_scan_scan_file" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center|left"
+            android:id="@id/tv_scan_roms"
+            android:layout_width="fill_parent"
+            android:layout_height="22.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:text="@string/auto_scan_scan_rom" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center|left"
+            android:id="@id/tv_scan_bios"
+            android:layout_width="fill_parent"
+            android:layout_height="22.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:text="@string/auto_scan_scan_bios" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center|left|top"
+            android:id="@id/tv_scan_info"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="16.0dip"
+            android:maxLines="3" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/bt_red"
+            android:gravity="left"
+            android:id="@id/tv_scan_warning"
+            android:visibility="invisible"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="16.0dip"
+            android:text="@string/no_bios_warning"
+            android:maxLines="2" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/btn_scan_finish_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_margin="8.0dip">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="#ff188c81"
+                android:gravity="center"
+                android:id="@id/btn_scan_result"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/scan_result"
+                android:layout_weight="1.0" />
+            <Button
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
+                android:textColor="@color/ic_color_active"
+                android:gravity="center"
+                android:id="@id/btn_cancel"
+                android:background="@color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@android:string/cancel"
+                android:layout_weight="1.0"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@id/dialog_scan_progressBar_layout"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/bt_white_pressed"
+            android:gravity="center"
+            android:id="@id/dialog_scan_progressBar_info"
+            android:layout_width="fill_parent"
+            android:layout_height="24.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:layout_above="@id/dialog_scan_progressBar" />
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@id/dialog_scan_progressBar"
+            android:layout_width="90.0dip"
+            android:layout_height="90.0dip"
+            android:layout_centerInParent="true"
+            style="?android:progressBarStyle" />
+    </RelativeLayout>
+</RelativeLayout>

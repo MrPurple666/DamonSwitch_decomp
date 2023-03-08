@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_gravity="center"
+    android:background="@color/color_donate_item"
+    android:layout_width="fill_parent"
+    android:layout_height="50.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@id/donate_mine_index"
+        android:paddingLeft="4.0dip"
+        android:paddingRight="4.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:minWidth="48.0dip" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/donate_mine_img"
+        android:layout_width="38.0dip"
+        android:layout_height="38.0dip"
+        android:src="@mipmap/ic_user_portrait"
+        android:layout_toRightOf="@id/donate_mine_index"
+        android:layout_centerInParent="true"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="0.0dip" />
+    <TextView
+        android:textColor="@color/colorMyGray"
+        android:gravity="center"
+        android:id="@id/donate_mine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/donate_mine_img"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10.0dip" />
+    <ImageView
+        android:id="@id/donate_mine_region"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_toRightOf="@id/donate_mine_name"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10.0dip" />
+    <TextView
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:id="@id/donate_mine_money"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginEnd="15.0dip"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

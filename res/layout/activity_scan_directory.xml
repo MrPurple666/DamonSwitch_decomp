@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/activity_scan_directory_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@id/scan_directory_title_layout"
+        android:background="@color/uvv_titlebar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentTop="true">
+        <ImageButton
+            android:gravity="center"
+            android:id="@id/scan_directory_title_back"
+            android:background="#00000000"
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/icon_left"
+            android:layout_alignParentLeft="true"
+            android:onClick="onViewClick"
+            android:contentDescription="back" />
+        <TextView
+            android:textSize="18.0dip"
+            android:textColor="#ffffffff"
+            android:gravity="center"
+            android:id="@id/scan_directory_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/scan_directory"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@id/scan_directory_container_for_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/scan_directory_autoscan_layout"
+        android:layout_below="@id/scan_directory_title_layout" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ProgressBar
+            android:id="@id/scan_directory_ProgressBar"
+            android:visibility="gone"
+            android:layout_width="96.0dip"
+            android:layout_height="96.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            style="?android:progressBarStyle" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/scan_directory_ProgressText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/BootingGame"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@id/scan_directory_autoscan_layout"
+        android:background="@drawable/background_btn_corner_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_margin="10.0dip"
+        android:layout_alignParentBottom="true"
+        android:onClick="onViewClick">
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center"
+            android:id="@id/scan_directory_autoscan"
+            android:paddingLeft="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_current_directory"
+            android:layout_centerInParent="true" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="32.0dip"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_query"
+            android:layout_toLeftOf="@id/scan_directory_autoscan"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

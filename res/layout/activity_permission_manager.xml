@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/mine_user_info_layout"
+        android:background="@color/color_gray_deep"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@id/layout_titlebar_pm"
+            layout="@layout/layout_titlebar_simple" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+            android:layout_marginTop="@dimen/activity_vertical_spacing"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing">
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_notification"
+                android:background="#ff3e3e3e"
+                android:layout_width="fill_parent"
+                android:layout_height="66.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_spacing"
+                app:info_name="@string/notification_permission"
+                app:info_name_tip="@string/notification_permission_text"
+                app:info_value="@string/privacy_statement" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_pm_storage"
+                android:background="#ff3e3e3e"
+                android:layout_width="fill_parent"
+                android:layout_height="150.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+                app:info_name="@string/storagepermission"
+                app:info_name_tip="@string/storagepermissiontext"
+                app:info_value="@string/privacy_statement" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_pm_phonestate"
+                android:background="#ff3e3e3e"
+                android:layout_width="fill_parent"
+                android:layout_height="140.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+                app:info_name="@string/phonepermission"
+                app:info_name_tip="@string/phonepermissiontext"
+                app:info_value="@string/privacy_statement" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_pm_location"
+                android:background="#ff3e3e3e"
+                android:layout_width="fill_parent"
+                android:layout_height="110.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+                app:info_name="@string/locationpermission"
+                app:info_name_tip="@string/locationpermissiontext"
+                app:info_value="@string/privacy_statement" />
+            <com.damonplay.damonps2.uiUtils.SimpleInfoItemLayout
+                android:id="@id/simple_info_pm_camera"
+                android:background="#ff3e3e3e"
+                android:layout_width="fill_parent"
+                android:layout_height="96.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+                app:info_name="@string/camerapermission"
+                app:info_name_tip="@string/camerapermissiontext"
+                app:info_value="@string/privacy_statement" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

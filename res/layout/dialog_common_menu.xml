@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/menu_ok"
+        android:text="@string/edit_my_info"
+        style="@style/BottomDialogTextStyle" />
+    <TextView
+        android:layout_marginTop="1.0px"
+        android:text="@string/edit_my_info"
+        style="@style/BottomDialogTextStyle" />
+    <TextView
+        android:id="@id/menu_cancel"
+        android:layout_marginTop="1.0px"
+        android:text="@android:string/cancel"
+        style="@style/BottomDialogTextStyle" />
+</LinearLayout>

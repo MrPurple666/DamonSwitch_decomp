@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        android:title="@string/pref_controls_touchcontrols"
+        android:key="onScreenTouchControls"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="@string/pref_controls_vibrate"
+        android:key="System_Vibrate"
+        android:defaultValue="true" />
+    <SwitchPreference
+        android:title="@string/pref_controls_gamepadInput"
+        android:key="GamepadInput"
+        android:summary="@string/pref_controls_gamepadSupportTip"
+        android:defaultValue="false" />
+    <ListPreference
+        android:entries="@array/TwoPlayersMode_entries"
+        android:title="@string/pref_controls_TwoPlayersMode"
+        android:key="TwoPlayersMode"
+        android:summary="%s"
+        android:defaultValue="0"
+        android:positiveButtonText="@null"
+        android:negativeButtonText="@null"
+        android:entryValues="@array/TwoPlayersMode_value" />
+    <PreferenceCategory
+        android:title="@string/virtual_control"
+        android:key="EditButtons">
+        <Preference
+            android:title="@string/pref_user_define_button"
+            android:key="UserDefineLayoutScale"
+            android:summary="@string/scale_portrait_tip" />
+        <ListPreference
+            android:title="@string/pref_controls_bind_rjoystick"
+            android:key="PrefKey_Bind_JoystickList"
+            android:defaultValue="0"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null" />
+        <ListPreference
+            android:title="@string/pref_controls_bind_sensitivity_x"
+            android:key="PrefKey_Bind_RJoystickX"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null" />
+        <ListPreference
+            android:title="@string/pref_controls_bind_sensitivity_y"
+            android:key="PrefKey_Bind_RJoystickY"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_controls_ComboKeySetup"
+        android:key="ComboKeySetup">
+        <MultiSelectListPreference
+            android:entries="@array/combokey_entries"
+            android:title="@string/pref_controls_ComboKey1"
+            android:key="ComboKey1"
+            android:summary="%s"
+            android:defaultValue="@array/combokey_defaultValue"
+            android:entryValues="@array/combokey_entryValue" />
+        <MultiSelectListPreference
+            android:entries="@array/combokey_entries"
+            android:title="@string/pref_controls_ComboKey2"
+            android:key="ComboKey2"
+            android:summary="%s"
+            android:defaultValue="@array/combokey_defaultValue"
+            android:entryValues="@array/combokey_entryValue" />
+        <MultiSelectListPreference
+            android:entries="@array/combokey_entries"
+            android:title="@string/pref_controls_ComboKey3"
+            android:key="ComboKey3"
+            android:summary="%s"
+            android:defaultValue="@array/combokey_defaultValue"
+            android:entryValues="@array/combokey_entryValue" />
+        <MultiSelectListPreference
+            android:entries="@array/combokey_entries"
+            android:title="@string/pref_controls_ComboKey4"
+            android:key="ComboKey4"
+            android:summary="%s"
+            android:defaultValue="@array/combokey_defaultValue"
+            android:entryValues="@array/combokey_entryValue" />
+    </PreferenceCategory>
+</PreferenceScreen>

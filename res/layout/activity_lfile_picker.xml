@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/lfile_white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/layout_path"
+        android:background="#ffdddddd"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_below="@id/toolbar">
+        <TextView
+            android:textSize="14.0sp"
+            android:ellipsize="middle"
+            android:gravity="center|left"
+            android:id="@id/tv_path"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8.0dip"
+            android:singleLine="true"
+            android:layout_weight="1.0" />
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/tv_back"
+            android:background="@drawable/lfile_back_bg"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/lfile_UpOneLevel"
+            android:drawableLeft="@mipmap/lfile_up"
+            android:drawablePadding="4.0dip" />
+    </LinearLayout>
+    <Button
+        android:textSize="18.0sp"
+        android:textColor="@color/lfile_white"
+        android:id="@id/btn_addbook"
+        android:background="@drawable/lfile_btn_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lfile_Selected"
+        android:layout_alignParentBottom="true" />
+    <com.leon.lfilepickerlibrary.widget.EmptyRecyclerView
+        android:id="@id/recylerview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/btn_addbook"
+        android:layout_below="@id/layout_path" />
+    <include
+        android:id="@id/empty_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_path"
+        layout="@layout/lfile_emptyview" />
+</RelativeLayout>

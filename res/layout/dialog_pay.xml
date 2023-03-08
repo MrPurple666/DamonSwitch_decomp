@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/umeng_socialize_text_share_content"
+    android:layout_width="200.0dip"
+    android:layout_height="250.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="您输入的内容有误" />
+    <Button
+        android:id="@id/btn_ok"
+        android:layout_width="120.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="20.0dip"
+        android:text="" />
+    <Button
+        android:id="@id/btn_cancel"
+        android:layout_width="120.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="20.0dip"
+        android:text="confirm" />
+</LinearLayout>

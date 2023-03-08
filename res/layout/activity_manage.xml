@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/colorMyDarker"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="260.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:theme="@style/MyAppTheme.AppBarOverlay"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:id="@id/activity_manage_title_bar"
+        android:background="@color/colorMyDark"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentTop="true">
+        <ImageButton
+            android:gravity="center"
+            android:id="@id/activity_manage_title_bar_back"
+            android:background="#00000000"
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/icon_left"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="返回" />
+        <TextView
+            android:textSize="18.0dip"
+            android:textColor="#ffffffff"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_gravity="center|left"
+            android:id="@id/activity_manage_title_bar_name"
+            android:paddingRight="8.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="标题"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/activity_manage_title_bar_back" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_manage_title_bar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/activity_manage_qq_group"
+                android:background="@color/colorMyDark"
+                android:layout_width="fill_parent"
+                android:layout_height="42.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="切换QQ群" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/activity_manage_video_upload"
+                android:background="@color/colorMyDark"
+                android:layout_width="fill_parent"
+                android:layout_height="42.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="视频上传" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/activity_manage_video_remove"
+                android:background="@color/colorMyDark"
+                android:layout_width="fill_parent"
+                android:layout_height="42.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="视频删除" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/activity_manage_archive_remove"
+                android:background="@color/colorMyDark"
+                android:layout_width="fill_parent"
+                android:layout_height="42.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="推荐存档删除" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/activity_manage_app_update"
+                android:background="@color/colorMyDark"
+                android:layout_width="fill_parent"
+                android:layout_height="42.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="应用自升级" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/colorMyGray"
+                android:gravity="center"
+                android:id="@id/activity_manage_device_inactive"
+                android:background="@color/colorMyDark"
+                android:layout_width="fill_parent"
+                android:layout_height="42.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="账号去除登录记录" />
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@id/Dialog_ProgressBar"
+        android:visibility="gone"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        android:layout_centerInParent="true"
+        style="?android:progressBarStyle" />
+</RelativeLayout>

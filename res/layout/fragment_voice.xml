@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    android:background="@color/translucent_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20.0dip"
+        android:text="@string/voice" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_voice_audiostretching"
+                android:layout_marginStart="20.0dip" />
+        </LinearLayout>
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@id/switchvoice_speed_stretch"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10.0dip"
+            android:layout_alignParentEnd="true"
+            style="@style/SwitchButtonStyleMD" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_voice_audio_all"
+                android:layout_marginStart="20.0dip" />
+        </LinearLayout>
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@id/switchvoice_speed_all"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10.0dip"
+            android:layout_alignParentEnd="true"
+            style="@style/SwitchButtonStyleMD" />
+    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+        <SeekBar
+            android:id="@id/switchvoice_sb_speed"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:layout_weight="1.0"
+            android:layout_marginStart="20.0dip" />
+        <TextView
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical"
+            android:id="@id/switchvoice_seek_barTv"
+            android:layout_width="60.0dip"
+            android:layout_height="wrap_content"
+            android:text="10" />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

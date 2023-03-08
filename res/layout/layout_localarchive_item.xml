@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="fill_parent"
+    android:layout_height="98.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:background="#60000000"
+        android:layout_width="fill_parent"
+        android:layout_height="90.0dip"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing_tiny"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing_tiny">
+        <ImageView
+            android:id="@id/local_archive_img"
+            android:background="#60000000"
+            android:layout_width="128.0dip"
+            android:layout_height="90.0dip"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true" />
+        <com.damonplay.damonps2.uiUtils.IconFontTextView
+            android:textSize="32.0sp"
+            android:textColor="@color/ic_color_active"
+            android:gravity="center"
+            android:id="@id/local_archive_upload"
+            android:background="@drawable/background_btn_circle_white_trans"
+            android:padding="6.0dip"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_marginLeft="40.0dip"
+            android:layout_marginTop="21.0dip"
+            android:text="@string/icon_upload" />
+        <TextView
+            android:textSize="28.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/local_archive_id"
+            android:paddingRight="4.0dip"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/text_color_gray_deep"
+            android:shadowDx="4.0"
+            android:shadowDy="4.0"
+            android:shadowRadius="4.0"
+            android:layout_alignRight="@id/local_archive_img"
+            android:layout_alignBottom="@id/local_archive_img"
+            android:alpha="0.7" />
+        <ImageView
+            android:id="@id/archive_delete"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="28.0dip"
+            android:layout_height="20.0dip"
+            android:layout_margin="4.0dip"
+            android:src="@drawable/ic_delete_64"
+            android:layout_alignLeft="@id/local_archive_img"
+            android:layout_alignBottom="@id/local_archive_img"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/text_color_white_light"
+            android:textColorHint="@color/text_color_gray"
+            android:gravity="center_vertical"
+            android:id="@id/archive_desclocal_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing_tiny"
+            android:layout_marginRight="@dimen/activity_horizontal_spacing_tiny"
+            android:minHeight="@dimen/dp_40"
+            android:maxEms="32"
+            android:layout_toLeftOf="@id/save_archive_btn_layout"
+            android:layout_toRightOf="@id/local_archive_img"
+            android:layout_above="@id/archivetimeTv"
+            android:layout_alignTop="@id/local_archive_img" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:id="@id/archivetimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="22.0dip"
+            android:layout_marginLeft="@dimen/activity_horizontal_spacing_tiny"
+            android:maxLines="1"
+            android:layout_toRightOf="@id/local_archive_img"
+            android:layout_alignBottom="@id/local_archive_img" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:id="@id/save_archive_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="78.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15.0dip"
+            android:layout_alignParentEnd="true">
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@id/saveArchiveTv"
+                android:background="@color/ic_color_active"
+                android:layout_width="68.0dip"
+                android:layout_height="36.0dip"
+                android:text="@string/saveState" />
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@id/loadArchiveTv"
+                android:background="@color/ic_color_active"
+                android:layout_width="68.0dip"
+                android:layout_height="36.0dip"
+                android:layout_marginTop="@dimen/activity_vertical_spacing_tiny"
+                android:text="@string/loadState"
+                android:layout_alignParentEnd="true" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

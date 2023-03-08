@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingLeft="28.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="98.0dip"
+    app:layout_anchorGravity="right"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:id="@id/studio_text_layout"
+        android:layout_width="240.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/studio_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="28.0dip"
+            android:text="@string/damon_studio"
+            android:drawableLeft="@drawable/damon_main_local_tiny"
+            android:drawablePadding="6.0dip"
+            android:layout_above="@id/studio_time" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_white_light"
+            android:gravity="center|left"
+            android:id="@id/studio_time"
+            android:layout_width="fill_parent"
+            android:layout_height="28.0dip"
+            android:text="12 / 2022" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ImageView
+        android:layout_width="90.0dip"
+        android:layout_height="90.0dip"
+        android:layout_marginTop="@dimen/dp_4"
+        android:src="@mipmap/damon_zhang"
+        android:layout_marginEnd="18.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/background_dialog_corner_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_buy_pro_inner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_buy_pro_inner" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="center"
+        android:id="@id/buy_pro_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:layout_marginBottom="@dimen/activity_vertical_spacing"
+        android:text="@string/buy_it_now_tip"
+        android:layout_below="@id/layout_buy_pro_inner" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/text_size_title_big"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@id/buy_pro_btn"
+        android:background="@drawable/background_buy_btn_corner"
+        android:paddingLeft="70.0dip"
+        android:paddingRight="70.0dip"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="42.0dip"
+        android:layout_margin="@dimen/activity_vertical_spacing"
+        android:text="@string/buyNow"
+        android:layout_below="@id/buy_pro_desc"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

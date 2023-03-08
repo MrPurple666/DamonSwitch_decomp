@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="38.0sp"
+        android:textColor="@color/text_color_gray_deep"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_marginTop="@dimen/activity_vertical_spacing_large"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:text="@string/usedquestion" />
+    <WebView
+        android:id="@id/explain_WebView"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</androidx.appcompat.widget.LinearLayoutCompat>

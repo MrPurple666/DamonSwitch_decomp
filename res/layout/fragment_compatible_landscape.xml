@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/fragment_top_layout"
+        android:background="@color/color_gray_deep"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@id/toolbarTitleLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_scrollFlags="enterAlways|scroll">
+            <include
+                layout="@layout/layout_app_status_landscape" />
+            <include
+                layout="@layout/layout_top_menu" />
+        </RelativeLayout>
+        <include
+            layout="@layout/layout_network_error" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@id/swipeRefreshLayout"
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_spacing_tiny"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:id="@id/compatible_search_layout_top"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <com.damonplay.damonps2.uiUtils.SearchPanelView
+                    android:gravity="center"
+                    android:id="@id/compatible_search_layout"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_alignParentLeft="true" />
+                <include
+                    android:id="@id/compatible_advanced_search"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/compatible_search_layout"
+                    layout="@layout/layout_advanced_search" />
+            </RelativeLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@id/center_no_data_layout"
+                android:padding="20.0dip"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="80.0dip"
+                android:layout_centerInParent="true">
+                <com.damonplay.damonps2.uiUtils.IconFontTextView
+                    android:textSize="48.0sp"
+                    android:textColor="@color/colorMyGray"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/icon_game_pad" />
+                <TextView
+                    android:textSize="12.0dip"
+                    android:textColor="@color/colorMyGray"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/no_hot_video_tip" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/compatible_recyclerview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/compatible_search_layout_top"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

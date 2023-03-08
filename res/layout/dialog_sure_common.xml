@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_btn_corner_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="right"
+        android:id="@id/dialog_close"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+    <TextView
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/text_color_white_light"
+        android:layout_gravity="center|left"
+        android:id="@id/dialog_common_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:layout_marginBottom="@dimen/activity_vertical_spacing"
+        android:minHeight="@dimen/menu_item_height"
+        android:layout_below="@id/dialog_close" />
+    <TextView
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/text_color_gray"
+        android:gravity="center_vertical"
+        android:id="@id/dialog_detail_info"
+        android:background="#ff4c4a4c"
+        android:padding="@dimen/activity_horizontal_spacing_tiny"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:text="超级玛丽"
+        android:drawablePadding="4.0dip" />
+    <Button
+        android:textSize="@dimen/text_size_title"
+        android:textColor="@color/text_color_white_light"
+        android:id="@id/dialog_ok_btn"
+        android:background="@color/red_import"
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_marginTop="@dimen/activity_horizontal_spacing"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:layout_marginBottom="@dimen/activity_horizontal_spacing"
+        android:text="@android:string/ok"
+        android:layout_alignParentBottom="true" />
+</LinearLayout>

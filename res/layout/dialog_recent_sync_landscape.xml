@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/background_dialog_corner_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="260.0dip"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/dialog_close"
+        android:src="@mipmap/ic_close"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        style="@style/dialog_close_style" />
+    <ProgressBar
+        android:id="@id/dialog_qrcode_share_progressBar"
+        android:layout_width="90.0dip"
+        android:layout_height="90.0dip"
+        android:layout_centerInParent="true"
+        style="?android:progressBarStyle" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/dialog_share_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_close">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/colorMyDarker"
+                android:gravity="center|left|top"
+                android:id="@id/dialog_sync_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:minHeight="40.0dip" />
+            <TextView
+                android:textSize="18.0sp"
+                android:textStyle="italic"
+                android:textColor="@color/bt_red"
+                android:gravity="center|left"
+                android:id="@id/dialog_sync_reason_title"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/sync_share_dialog_4"
+                android:layout_below="@id/dialog_sync_tv" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/colorMyDarker"
+                android:gravity="center|left"
+                android:autoLink="email"
+                android:id="@id/dialog_sync_reason"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:minHeight="50.0dip"
+                android:layout_below="@id/dialog_sync_reason_title" />
+            <TextView
+                android:textColor="@color/colorMyDark"
+                android:gravity="center"
+                android:id="@id/dialog_qrcode_share_btn"
+                android:background="@drawable/background_btn_corner_white"
+                android:layout_width="fill_parent"
+                android:layout_height="36.0dip"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="6.0dip"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="10.0dip"
+                android:text="@android:string/ok"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:orientation="vertical"
+            android:id="@id/dialog_sync_error_layout"
+            android:visibility="visible"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="@color/colorMyDarker"
+                android:gravity="center|left|top"
+                android:id="@id/dialog_sync_error_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:minHeight="40.0dip"
+                android:text="@string/sync_share_dialog_6" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/colorMyDarker"
+                android:gravity="left"
+                android:id="@id/dialog_sync_error_romName"
+                android:scrollbars="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:minHeight="10.0dip"
+                android:layout_below="@id/dialog_sync_error_title" />
+            <TextView
+                android:textColor="@color/colorMyDark"
+                android:gravity="center"
+                android:id="@id/dialog_qrcode_callback_btn"
+                android:background="@drawable/background_btn_corner_white"
+                android:layout_width="fill_parent"
+                android:layout_height="36.0dip"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="6.0dip"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="10.0dip"
+                android:text="@string/RecommendGameSettingNegativeP0"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_below="@id/dialog_share_content" />
+</RelativeLayout>

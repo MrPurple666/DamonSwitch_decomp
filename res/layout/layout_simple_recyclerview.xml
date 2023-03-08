@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/bg_white_radius_6"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="@dimen/text_size_title"
+        android:textColor="@color/text_color_white_light"
+        android:gravity="left"
+        android:id="@id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing_big"
+        android:layout_marginTop="@dimen/activity_horizontal_spacing"
+        android:text="@string/switch_my_bios" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/dialog_select_recyclerview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_spacing"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginRight="@dimen/activity_horizontal_spacing"
+        android:layout_below="@id/dialog_title" />
+    <View
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip" />
+</RelativeLayout>

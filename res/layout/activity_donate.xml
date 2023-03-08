@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/donate_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="0.0dip"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:id="@id/donate_back_img"
+            android:padding="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_left"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10.0dip" />
+        <com.google.android.material.tabs.TabLayout
+            android:layout_gravity="center"
+            android:id="@id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="50.0dip"
+            android:layout_centerInParent="true"
+            app:tabIndicatorFullWidth="false"
+            app:tabMinWidth="140.0dip"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="10.0dip"
+            app:tabPaddingStart="10.0dip" />
+    </RelativeLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/view_pager2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10.0dip"
+        android:layout_above="@id/godonatell"
+        android:layout_below="@id/donate_title_layout" />
+    <androidx.cardview.widget.CardView
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@id/godonatell"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_margin="@dimen/activity_horizontal_spacing"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="#ffd52b06"
+        app:cardCornerRadius="8.0dip">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@mipmap/donate_img" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/donate_now"
+                android:layout_marginStart="@dimen/dp_10" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

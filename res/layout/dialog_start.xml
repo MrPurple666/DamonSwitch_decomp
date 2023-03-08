@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="350.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/start_dialog_contentlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginBottom="16.0dip">
+        <TextView
+            android:textSize="13.0sp"
+            android:textStyle="bold"
+            android:id="@id/txt_start"
+            android:padding="8.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="130.0dip"
+            android:text=""
+            android:layout_alignParentTop="true" />
+        <Button
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/btn_start"
+            android:background="@drawable/my_button_green"
+            android:padding="8.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16.0dip"
+            android:minHeight="56.0dip"
+            android:layout_below="@id/txt_start"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false" />
+        <Button
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/btn_buypro"
+            android:background="@drawable/my_button_blue"
+            android:padding="8.0dip"
+            android:layout_width="228.0dip"
+            android:layout_height="60.0dip"
+            android:text="@string/buy_pro_toskip"
+            android:drawableLeft="@drawable/ic_buyvip_48"
+            android:layout_below="@id/btn_start"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false" />
+        <Button
+            android:textSize="12.0sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/btn_pro_login"
+            android:background="@drawable/my_button_blue"
+            android:padding="6.0dip"
+            android:layout_width="228.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/pro_login"
+            android:layout_below="@id/btn_buypro"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ProgressBar
+            android:id="@id/progressbar_2"
+            android:visibility="gone"
+            android:layout_width="64.0dip"
+            android:layout_height="64.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            style="?android:progressBarStyle" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorMyBlue"
+            android:gravity="center"
+            android:id="@id/progressText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>
